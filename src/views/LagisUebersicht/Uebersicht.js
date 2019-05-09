@@ -14,9 +14,13 @@ import Historie from './widgets/Historie';
 import Kassenzeichen from './widgets/Kassenzeichen';
 import DMS from './widgets/DMS';
 
-//hooks import useWindowSize from '@rehooks/window-size';
+//hooks
+import useWindowSize from '@rehooks/window-size';
 
 const Comp = ({}) => {
+	let windowSize = useWindowSize();
+	console.log('windowSize', windowSize);
+
 	const zoom = 15;
 	const layers = 'wupp-plan-live@90';
 	const namedMapStyle = 'default';
@@ -44,7 +48,7 @@ const Comp = ({}) => {
 							<Map
 								crs={MappingConstants.crs25832}
 								style={{
-									height: 600
+									height: windowSize.innerHeight - 630
 								}}
 								center={{
 									lat: 51.26357182763206,

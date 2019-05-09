@@ -3,14 +3,11 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"react": "^16.8.6",
-		"react-cismap": "^0.3.1",
-		"react-dom": "^16.8.6",
-		"react-scripts": "3.0.0",
 		"@coreui/coreui": "^2.1.9",
 		"@coreui/coreui-plugin-chartjs-custom-tooltips": "^1.2.0",
 		"@coreui/icons": "0.3.0",
 		"@coreui/react": "~2.1.5",
+		"@rehooks/window-size": "^1.0.2",
 		"bootstrap": "^4.3.1",
 		"chart.js": "^2.8.0",
 		"classnames": "^2.2.6",
@@ -21,10 +18,14 @@
 		"font-awesome": "^4.7.0",
 		"node-sass": "^4.11.0",
 		"prop-types": "^15.7.2",
+		"react": "^16.8.6",
 		"react-app-polyfill": "^0.2.2",
 		"react-chartjs-2": "^2.7.4",
+		"react-cismap": "^0.3.1",
+		"react-dom": "^16.8.6",
 		"react-router-config": "^4.4.0-beta.8",
 		"react-router-dom": "~4.3.1",
+		"react-scripts": "3.0.0",
 		"react-test-renderer": "^16.8.5",
 		"reactstrap": "^7.1.0",
 		"simple-line-icons": "^2.4.1"
@@ -42,7 +43,11 @@
 		"extends": "react-app"
 	},
 	"browserslist": {
-		"production": [ ">0.2%", "not dead", "not op_mini all" ],
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
 		"development": [
 			"last 1 chrome version",
 			"last 1 firefox version",
