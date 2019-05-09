@@ -1,0 +1,6 @@
+{
+	"name": "LagisUebersicht",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./Uebersicht.js"
+}

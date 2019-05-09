@@ -1,0 +1,6 @@
+{
+	"name": "LagisMipa",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./Mipa.js"
+}

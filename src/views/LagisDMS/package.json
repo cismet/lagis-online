@@ -1,0 +1,6 @@
+{
+	"name": "LagisDMS",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./DMS.js"
+}

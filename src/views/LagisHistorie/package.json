@@ -1,0 +1,6 @@
+{
+	"name": "LagisHistorie",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./Historie.js"
+}

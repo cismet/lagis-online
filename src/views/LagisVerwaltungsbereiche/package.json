@@ -1,0 +1,6 @@
+{
+	"name": "LagisVerwaltungsbereiche",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./Verwaltungsbereiche.js"
+}

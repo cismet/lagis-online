@@ -1,0 +1,6 @@
+{
+	"name": "LagisNutzung",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./Nutzung.js"
+}

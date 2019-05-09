@@ -1,0 +1,6 @@
+{
+	"name": "LagisKassenzeichen",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./Kassenzeichen.js"
+}
