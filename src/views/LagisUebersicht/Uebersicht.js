@@ -141,7 +141,7 @@ const Comp = ({}) => {
 		}
 	];
 
-	const zoom = 15;
+	const zoom = 13.5;
 	const layers = 'wupp-plan-live@90';
 	const namedMapStyle = 'default';
 	return (
@@ -171,7 +171,7 @@ const Comp = ({}) => {
 									height: windowSize.innerHeight - 630
 								}}
 								center={{
-									lat: 51.253233,
+									lat: 51.252933,
 									lng: 7.141941
 								}}
 								zoomControl={true}
@@ -181,6 +181,8 @@ const Comp = ({}) => {
 								zoom={zoom}
 								minZoom={5}
 								maxZoom={16}
+								zoomSnap={0.5}
+								zoomDelta={0.5}
 							>
 								{getLayersByName(layers, namedMapStyle)}
 								<FeatureCollectionDisplay

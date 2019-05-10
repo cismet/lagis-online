@@ -576,6 +576,11 @@ class DefaultHeader extends Component {
 							</NavLink>
 						</NavItem>
 					</NavItem>
+					<NavItem className='d-md-down-none'>
+						<NavLink to='#' className='nav-link'>
+							<i className='fa fa-refresh' />
+						</NavLink>
+					</NavItem>
 				</Nav>
 				<Nav className='ml-auto' navbar>
 					<NavItem className='d-md-down-none'>
@@ -586,19 +591,7 @@ class DefaultHeader extends Component {
 
 					<NavItem className='d-md-down-none'>
 						<NavLink to='#' className='nav-link'>
-							<i className='fa fa-refresh' />
-						</NavLink>
-					</NavItem>
-
-					<NavItem className='d-md-down-none'>
-						<NavLink to='#' className='nav-link'>
 							<i className='fa fa-search' />
-						</NavLink>
-					</NavItem>
-
-					<NavItem className='d-md-down-none'>
-						<NavLink to='#' className='nav-link'>
-							<i className='fa fa-tint' />
 						</NavLink>
 					</NavItem>
 
