@@ -569,24 +569,52 @@ class DefaultHeader extends Component {
 							/>
 						</div>
 					</NavItem>
+					<NavItem style={{ paddingRight: '20px' }}>
+						<NavItem className='d-md-down-none'>
+							<NavLink to='#' className='nav-link'>
+								<i className='fa fa-filter' />
+							</NavLink>
+						</NavItem>
+					</NavItem>
 				</Nav>
 				<Nav className='ml-auto' navbar>
 					<NavItem className='d-md-down-none'>
 						<NavLink to='#' className='nav-link'>
-							<i className='icon-bell' />
-							<Badge pill color='danger'>
-								5
-							</Badge>
+							<i className='icon-printer' />
+						</NavLink>
+					</NavItem>
+
+					<NavItem className='d-md-down-none'>
+						<NavLink to='#' className='nav-link'>
+							<i className='fa fa-refresh' />
+						</NavLink>
+					</NavItem>
+
+					<NavItem className='d-md-down-none'>
+						<NavLink to='#' className='nav-link'>
+							<i className='fa fa-search' />
+						</NavLink>
+					</NavItem>
+
+					<NavItem className='d-md-down-none'>
+						<NavLink to='#' className='nav-link'>
+							<i className='fa fa-tint' />
+						</NavLink>
+					</NavItem>
+
+					<NavItem className='d-md-down-none'>
+						<NavLink to='#' className='nav-link'>
+							<i className='fa fa-file-text-o' />
 						</NavLink>
 					</NavItem>
 					<NavItem className='d-md-down-none'>
 						<NavLink to='#' className='nav-link'>
-							<i className='icon-list' />
+							<i className='fa fa-paste' />
 						</NavLink>
 					</NavItem>
 					<NavItem className='d-md-down-none'>
 						<NavLink to='#' className='nav-link'>
-							<i className='icon-location-pin' />
+							<i className='fa fa-copy' />
 						</NavLink>
 					</NavItem>
 					<AppHeaderDropdown direction='down'>
@@ -639,7 +667,7 @@ class DefaultHeader extends Component {
 					</AppHeaderDropdown>
 				</Nav>
 				<AppAsideToggler className='d-md-down-none' />
-				{/*<AppAsideToggler className="d-lg-none" mobile />*/}
+				<AppAsideToggler className='d-lg-none' mobile />
 			</React.Fragment>
 		);
 	}
