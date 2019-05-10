@@ -43,7 +43,7 @@ const Comp = ({}) => {
 			<Row>
 				<Col>
 					<Card>
-						<CardHeader>Langerfeld / 449 152 / 0</CardHeader>
+						<CardHeader>Elberfeld / 335 / 48 / 0</CardHeader>
 						<CardBody>
 							<Map
 								crs={MappingConstants.crs25832}
