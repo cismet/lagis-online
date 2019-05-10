@@ -1,7 +1,10 @@
 {
-	"name": "521-lagis-online",
-	"version": "0.1.0",
+	"name": "lagis-online",
+	"version": "0.0.0",
 	"private": true,
+	"config": {
+		"dockerRegistryPath": "cismet"
+	},
 	"dependencies": {
 		"@coreui/coreui": "^2.1.9",
 		"@coreui/coreui-plugin-chartjs-custom-tooltips": "^1.2.0",
@@ -38,17 +41,18 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject-dont-dont": "react-scripts eject",
+		"postversion": "sed '/^.*\"version\":.*$/d' package.json > .package.json.without.version && echo $npm_package_version > .version && git rev-parse HEAD > .githash",
+		"newSnapshot": "npm version preminor --preid=SNAPSHOT",
+		"bumpSnapshot": "npm version prerelease --preid=SNAPSHOT",
+		"build:docker": "VERSION=`echo $npm_package_version| sed 's/\\.[0-9]*-SNAPSHOT.*$/-SNAPSHOT/'`; docker build  -t cismet/$npm_package_name -t cismet/$npm_package_name:$VERSION .",
+		"publish:docker": "npm run build:docker; VERSION=`echo $npm_package_version| sed 's/\\.[0-9]*-SNAPSHOT.*$/-SNAPSHOT/'`; docker tag cismet/$npm_package_name:$VERSION $npm_package_config_dockerRegistryPath/$npm_package_name:$VERSION && docker push $npm_package_config_dockerRegistryPath/$npm_package_name:$VERSION"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
 	},
 	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
+		"production": [ ">0.2%", "not dead", "not op_mini all" ],
 		"development": [
 			"last 1 chrome version",
 			"last 1 firefox version",
