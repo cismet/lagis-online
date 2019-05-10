@@ -21,7 +21,6 @@ import useWindowSize from '@rehooks/window-size';
 
 const Comp = ({}) => {
 	let windowSize = useWindowSize();
-	console.log('windowSize', windowSize);
 	const mockFC = [
 		{
 			id: 1,
