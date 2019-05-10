@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import { getTopicMapVersion, getTopicMapHash } from '../../constants/versions';
+
 const propTypes = {
 	children: PropTypes.node
 };
@@ -15,7 +17,7 @@ class DefaultFooter extends Component {
 		return (
 			<React.Fragment>
 				<span>
-					<a href='https://cismet.de'>LagIS-online</a> &copy; 2019.
+					<a href='https://cismet.de'>LagIS-online</a> &copy; 2019. {getTopicMapVersion()}
 				</span>
 				<span className='ml-auto'>
 					Powered by <a href='https://cismet.de'>cids</a>
