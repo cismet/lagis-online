@@ -41,6 +41,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
+		"storybook": "start-storybook",
 		"eject-dont-dont": "react-scripts eject",
 		"postversion": "sed '/^.*\"version\":.*$/d' package.json > .package.json.without.version && echo $npm_package_version > .version && git rev-parse HEAD > .githash",
 		"newSnapshot": "npm version preminor --preid=SNAPSHOT",
@@ -62,5 +63,12 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"devDependencies": {
+		"@storybook/addon-actions": "^5.2.5",
+		"@storybook/addon-docs": "^5.2.5",
+		"@storybook/addon-info": "^5.2.5",
+		"@storybook/addon-links": "^5.2.5",
+		"@storybook/react": "^5.2.5"
 	}
 }
