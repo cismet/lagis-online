@@ -1,20 +1,40 @@
-import React, {Component} from 'react';
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Card,
-  CardBody,
-  CardHeader,
-  Col,
-  Row
-} from 'reactstrap';
+import React from 'react';
+import RebeTabelle from './RebeTabelle.js';
+import {Card, CardBody, CardHeader, Col, Row} from 'reactstrap';
+import LagisMap from '../Commons/LagisMap';
 
-class Breadcrumbs extends Component {
-  render() {
-    return (
-      <div className="animated fadeIn"></div>
-    );
-  }
+
+
+
+const Rebe = () => {
+  return  (
+    <div className="animated fadeIn">
+        <Row>
+            <Col>
+                <Card>
+                    <CardHeader>
+                        <i className="fa fa-align-justify"></i> Rechte und Belastungen
+                    </CardHeader>
+                    <CardBody>
+                        <RebeTabelle />
+                    </CardBody>
+                </Card>
+            </Col>
+        </Row>
+        <Row>
+            <Col>
+                <Card>
+                    <CardHeader>
+                        <i className="fa fa-align-justify"></i> Karte
+                    </CardHeader>
+                    <CardBody>
+                        <LagisMap />
+                    </CardBody>
+                </Card>
+            </Col>
+        </Row>
+    </div>)
 }
 
-export default Breadcrumbs;
+
+export default Rebe;
