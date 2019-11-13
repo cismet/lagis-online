@@ -144,7 +144,8 @@ const CustomTable = ({
 			<Card>
 				<CardHeader style={{ display: 'inline-flex' }}>
 					<i style={{ margin: 'auto' }} className="fa fa-align-justify" />{' '}
-					<span style={{ margin: 'auto' }}>&nbsp;{title}</span>
+					<span style={{ margin: 'auto', textAlign: 'left' }}>&nbsp;{title}</span>
+					{!buttonsEnabled && <div style={{ width: '100%' }} />}
 					{buttonsEnabled && (
 						<ButtonToolbar style={{ width: '100%' }}>
 							{/* className="mb-3"*/}

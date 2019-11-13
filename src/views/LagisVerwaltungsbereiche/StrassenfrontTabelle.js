@@ -1,41 +1,36 @@
 import React from 'react';
-import "react-table/react-table.css";
+import 'react-table/react-table.css';
 import CustomTable from '../Commons/CustomTable';
 
 const extractStrassenfront = (flurstueck) => {
-    var strassenfronten = [];
-    var strassen = flurstueck.n_strassenfronten;
+	var strassenfronten = [];
+	var strassen = flurstueck.n_strassenfronten;
 
-    if (strassen != null) {
-        for (var index = 0; index < strassen.length; ++index) {
-            var stelle = {};
-            stelle.strasse = strassen[index].strassenname;
-            stelle.laenge = strassen[index].laenge;
-            strassenfronten.push(stelle);
-        }
-    }
+	if (strassen != null) {
+		for (var index = 0; index < strassen.length; ++index) {
+			var stelle = {};
+			stelle.strasse = strassen[index].strassenname;
+			stelle.laenge = strassen[index].laenge;
+			strassenfronten.push(stelle);
+		}
+	}
 
-    return strassenfronten;
-}
+	return strassenfronten;
+};
 
+const StrassenfrontTabelle = ({ flurstueck: flData }) => {
+	const columnsStrasse = [
+		{
+			Header: 'Straße',
+			accessor: 'strasse'
+		},
+		{
+			Header: 'Länge',
+			accessor: 'laenge'
+		}
+	];
 
-const StrassenfrontTabelle = ({flurstueck: flData}) => {
-    const columnsStrasse = [{
-        Header: 'Straße',
-        accessor: 'strasse'
-      }, {
-        Header: 'Länge',
-        accessor: 'laenge'
-      }];
-    
-
-    return (
-            <CustomTable
-            data={extractStrassenfront(flData)}
-            columns={columnsStrasse}
-            />
-        )
-    
-}
+	return <CustomTable cardTitle="Straßenfronten" data={extractStrassenfront(flData)} columns={columnsStrasse} />;
+};
 
 export default StrassenfrontTabelle;
