@@ -1,0 +1,6 @@
+{
+	"name": "Commons",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./Commons.js"
+}
