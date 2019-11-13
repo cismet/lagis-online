@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'react-table/react-table.css';
 import { Pagination, PaginationItem, PaginationLink, Table } from 'reactstrap';
-import { Col, Row, Button, ButtonGroup, ButtonToolbar } from 'reactstrap';
+import { Col, Row, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardHeader } from 'reactstrap';
 
 const createHeader = (cols) => {
 	var header = [];
@@ -69,23 +69,25 @@ const createPagination = (page, totalRows, rowsPerPage, setPage) => {
 		}
 	}
 
-	var backItem = (
-		<PaginationItem disabled={page === 0}>
-			<PaginationLink onClick={() => setPage(page - 1)} previous tag="button" />
-		</PaginationItem>
-	);
-	var nextItem = (
-		<PaginationItem disabled={page === totalRows / rowsPerPage - 1 || totalRows <= rowsPerPage}>
-			<PaginationLink onClick={() => setPage(page + 1)} next tag="button" />
-		</PaginationItem>
-	);
-	pagination.push(
-		<Pagination key={'page'}>
-			{backItem}
-			{pages}
-			{nextItem}
-		</Pagination>
-	);
+	if (totalRows > rowsPerPage) {
+		var backItem = (
+			<PaginationItem disabled={page === 0}>
+				<PaginationLink onClick={() => setPage(page - 1)} previous tag="button" />
+			</PaginationItem>
+		);
+		var nextItem = (
+			<PaginationItem disabled={page === totalRows / rowsPerPage - 1 || totalRows <= rowsPerPage}>
+				<PaginationLink onClick={() => setPage(page + 1)} next tag="button" />
+			</PaginationItem>
+		);
+		pagination.push(
+			<Pagination key={'page'}>
+				{backItem}
+				{pages}
+				{nextItem}
+			</Pagination>
+		);
+	}
 
 	return pagination;
 };
@@ -96,7 +98,8 @@ const CustomTable = ({
 	rowSelectionListener: listener,
 	selectedRow: selectedIndex,
 	buttons: buttonsEnabled,
-	additionalButtons: buttons
+	additionalButtons: buttons,
+	cardTitle: title
 }) => {
 	const rowsPerPage = 5;
 	const [ page, setPage ] = useState(0);
@@ -105,7 +108,7 @@ const CustomTable = ({
 		buttonsEnabled = true;
 	}
 
-	return (
+	const table = (
 		<div>
 			<Table responsive striped hover>
 				<thead>
@@ -117,7 +120,7 @@ const CustomTable = ({
 				<Col xs="12" lg="6">
 					{createPagination(page, d.length, rowsPerPage, setPage)}
 				</Col>
-				{buttonsEnabled && (
+				{false && (
 					<Col xs="12" lg="6" style={{ textAlign: 'right' }}>
 						<ButtonToolbar className="mb-3">
 							<ButtonGroup className="mr-2" style={{ margin: 'auto' }}>
@@ -135,6 +138,34 @@ const CustomTable = ({
 			</Row>
 		</div>
 	);
+
+	if (title != null) {
+		return (
+			<Card>
+				<CardHeader style={{ display: 'inline-flex' }}>
+					<i style={{ margin: 'auto' }} className="fa fa-align-justify" />{' '}
+					<span style={{ margin: 'auto' }}>&nbsp;{title}</span>
+					{buttonsEnabled && (
+						<ButtonToolbar style={{ width: '100%' }}>
+							{/* className="mb-3"*/}
+							<ButtonGroup className="mr-2" style={{ margin: 'auto' }}>
+								{buttons}
+								<Button>
+									<i className="fa fa-plus-circle fa-lg" />
+								</Button>
+								<Button>
+									<i className="fa fa-minus-circle fa-lg" />
+								</Button>
+							</ButtonGroup>
+						</ButtonToolbar>
+					)}
+				</CardHeader>
+				<CardBody>{table}</CardBody>
+			</Card>
+		);
+	} else {
+		return table;
+	}
 };
 
 export default CustomTable;
