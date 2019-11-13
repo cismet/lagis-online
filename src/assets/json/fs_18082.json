@@ -1,0 +1,1100 @@
+{
+  "$self" : "/LAGIS.FLURSTUECK/18082",
+  "id" : 18082,
+  "bemerkung" : "keine Straßenfront",
+  "fk_spielplatz" : null,
+  "fk_flurstueck_schluessel" : {
+    "$self" : "/LAGIS.FLURSTUECK_SCHLUESSEL/18082",
+    "id" : 18082,
+    "flur" : 473,
+    "flurstueck_zaehler" : 21,
+    "flurstueck_nenner" : 0,
+    "ist_gesperrt" : false,
+    "bemerkung_sperre" : null,
+    "datum_entstehung" : 1227074203529,
+    "gueltig_bis" : null,
+    "fk_gemarkung" : {
+      "$self" : "/LAGIS.GEMARKUNG/6",
+      "id" : 6,
+      "bezeichnung" : "Langerfeld",
+      "schluessel" : 3486
+    },
+    "datum_letzter_stadtbesitz" : 1571736532185,
+    "war_staedtisch" : true,
+    "fk_flurstueck_art" : {
+      "$self" : "/LAGIS.FLURSTUECK_ART/1",
+      "id" : 1,
+      "bezeichnung" : "städtisch"
+    },
+    "letzter_bearbeiter" : "BenderBauschJ403@NKF",
+    "letzte_bearbeitung" : 1571736532185
+  },
+  "in_stadtbesitz" : null,
+  "ar_baeume" : [ {
+    "$self" : "/LAGIS.BAUM/362",
+    "id" : 362,
+    "lage" : "Clausewitzstr.",
+    "auftragnehmer" : "103",
+    "baumnummer" : "",
+    "alte_nutzung" : "V",
+    "erfassungsdatum" : "2009-10-12",
+    "faelldatum" : null,
+    "flaeche" : null,
+    "bemerkung" : "Kleingarten##",
+    "fk_geom" : null,
+    "fk_baum_nutzung" : {
+      "$self" : "/LAGIS.BAUM_NUTZUNG/362",
+      "id" : 362,
+      "fk_ausgewaehlte_auspraegung" : null,
+      "fk_baum_kategorie" : {
+        "$self" : "/LAGIS.BAUM_KATEGORIE/1",
+        "id" : 1,
+        "bezeichnung" : "Einzelbaum",
+        "ar_kategorie_auspraegungen" : [ {
+          "$self" : "/LAGIS.BAUM_KATEGORIE_AUSPRAEGUNG/1",
+          "id" : 1,
+          "bezeichnung" : "Gefährdung"
+        }, {
+          "$self" : "/LAGIS.BAUM_KATEGORIE_AUSPRAEGUNG/2",
+          "id" : 2,
+          "bezeichnung" : "Ungefährlich"
+        } ]
+      }
+    },
+    "ar_baum_merkmale" : [ {
+      "$self" : "/LAGIS.BAUM_MERKMAL/1",
+      "id" : 1,
+      "bezeichnung" : "Luftbild"
+    } ]
+  } ],
+  "ar_vertraege" : [ {
+    "$self" : "/LAGIS.VERTRAG/116",
+    "id" : 116,
+    "aktenzeichen" : "403.05-27031",
+    "vertragspartner" : "OBERBEUL, Annemarie und Ulrike",
+    "datum_auflassung" : 1225062000000,
+    "datum_eintragung" : 1226444400000,
+    "bemerkung" : null,
+    "quadratmeterpreis" : 12.58,
+    "gesamtpreis" : 17622.23,
+    "fk_vertragsart" : {
+      "$self" : "/LAGIS.VERTRAGSART/1",
+      "id" : 1,
+      "bezeichnung" : "1\tKauf"
+    },
+    "n_beschluesse" : [ ],
+    "n_kosten" : [ {
+      "$self" : "/LAGIS.KOSTEN/86",
+      "id" : 86,
+      "datum" : 1226876400000,
+      "fk_kostenart" : {
+        "$self" : "/LAGIS.KOSTENART/1",
+        "id" : 1,
+        "bezeichnung" : "Notar",
+        "ist_nebenkostenart" : true
+      },
+      "betrag" : 222.23,
+      "fk_vertrag" : null
+    }, {
+      "$self" : "/LAGIS.KOSTEN/87",
+      "id" : 87,
+      "datum" : 1227740400000,
+      "fk_kostenart" : {
+        "$self" : "/LAGIS.KOSTENART/4",
+        "id" : 4,
+        "bezeichnung" : "Grunderwerbssteuer",
+        "ist_nebenkostenart" : true
+      },
+      "betrag" : 588.0,
+      "fk_vertrag" : null
+    } ]
+  } ],
+  "n_verwaltungsbereiche_eintraege" : [ {
+    "$self" : "/LAGIS.VERWALTUNGSBEREICHE_EINTRAG/18082",
+    "id" : 18082,
+    "fk_flurstueck" : null,
+    "geaendert_am" : 1382703205792,
+    "geaendert_von" : "BirkerH403@NKF",
+    "n_verwaltungsbereiche" : [ {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/14714",
+      "id" : 14714,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 7,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/1544",
+        "id" : 1544,
+        "geo_field" : "SRID=25832;POLYGON ((378433.075889493 5682328.17302968, 378427.323448087 5682326.13427236, 378417.748741056 5682344.77135732, 378422.701377774 5682347.37639882, 378433.075889493 5682328.17302968))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/16652",
+      "id" : 16652,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 8,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/1543",
+        "id" : 1543,
+        "geo_field" : "SRID=25832;POLYGON ((378406.085655118 5682341.30596425, 378401.351 5682354.89, 378403.27 5682356.052, 378409.612998868 5682359.89208486, 378416.073936368 5682345.86577871, 378406.085655118 5682341.30596425))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/16653",
+      "id" : 16653,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 0,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/1545",
+        "id" : 1545,
+        "geo_field" : "SRID=25832;POLYGON ((378430.155967618 5682335.66320302, 378426.805869962 5682341.77874257, 378441.893760587 5682349.5496166, 378445.471397306 5682343.56273916, 378430.155967618 5682335.66320302))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/16654",
+      "id" : 16654,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 3,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/1546",
+        "id" : 1546,
+        "geo_field" : "SRID=25832;POLYGON ((378410.643272306 5682328.22851064, 378406.085655118 5682341.30596425, 378416.073936368 5682345.86577871, 378422.760948087 5682332.70208242, 378410.643272306 5682328.22851064))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/16655",
+      "id" : 16655,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 4,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/1547",
+        "id" : 1547,
+        "geo_field" : "SRID=25832;POLYGON ((378426.282920743 5682325.76659658, 378413.127 5682321.101, 378410.643272306 5682328.22851064, 378422.760948087 5682332.70208242, 378426.282920743 5682325.76659658))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/16656",
+      "id" : 16656,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 9,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/1548",
+        "id" : 1548,
+        "geo_field" : "SRID=25832;POLYGON ((378410.374229337 5682360.33922841, 378411.5 5682360.984, 378429.004000001 5682370.998, 378436.879600431 5682357.88866689, 378417.077354337 5682346.07348134, 378410.374229337 5682360.33922841))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/16658",
+      "id" : 16658,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 1,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/1550",
+        "id" : 1550,
+        "geo_field" : "SRID=25832;POLYGON ((378426.283409024 5682325.76537587, 378422.760948087 5682332.70208242, 378416.073936368 5682345.86577871, 378409.612998868 5682359.89208486, 378409.988975431 5682360.11999013, 378410.374229337 5682360.33983876, 378417.077354337 5682346.07348134, 378417.442588712 5682345.37206533, 378423.152549649 5682348.44817617, 378426.805869962 5682341.77874257, 378434.066123868 5682328.52416494, 378433.075889493 5682328.17345693, 378422.701377774 5682347.37639882, 378417.744834806 5682344.77465322, 378427.323448087 5682326.13408925, 378426.283409024 5682325.76537587))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/16659",
+      "id" : 16659,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 6,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/1551",
+        "id" : 1551,
+        "geo_field" : "SRID=25832;POLYGON ((378432.396201993 5682331.57317617, 378430.155967618 5682335.66320302, 378445.471397306 5682343.56273916, 378447.862510587 5682339.57128408, 378432.396201993 5682331.57317617))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/16660",
+      "id" : 16660,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 5,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/1552",
+        "id" : 1552,
+        "geo_field" : "SRID=25832;POLYGON ((378426.805869962 5682341.77874257, 378423.152549649 5682348.44817617, 378417.442588712 5682345.37206533, 378417.077354337 5682346.07348134, 378436.879600431 5682357.88866689, 378441.893760587 5682349.5496166, 378426.805869962 5682341.77874257))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/16661",
+      "id" : 16661,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 2,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/1553",
+        "id" : 1553,
+        "geo_field" : "SRID=25832;POLYGON ((378450.903999999 5682334.494, 378434.066123868 5682328.52416494, 378432.396201993 5682331.57317617, 378447.862510587 5682339.57128408, 378450.903999999 5682334.494))"
+      }
+    } ]
+  }, {
+    "$self" : "/LAGIS.VERWALTUNGSBEREICHE_EINTRAG/23212",
+    "id" : 23212,
+    "fk_flurstueck" : null,
+    "geaendert_am" : 1450434032457,
+    "geaendert_von" : "BenderBauschJ403@NKF",
+    "n_verwaltungsbereiche" : [ {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/19389",
+      "id" : 19389,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 119,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/2542",
+        "id" : 2542,
+        "geo_field" : "SRID=25832;POLYGON ((378430.155967618 5682335.66320302, 378426.805869962 5682341.77874257, 378441.893760587 5682349.5496166, 378445.471397306 5682343.56273916, 378430.155967618 5682335.66320302))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/19390",
+      "id" : 19390,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 64,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/2543",
+        "id" : 2543,
+        "geo_field" : "SRID=25832;POLYGON ((378426.283409024 5682325.76537587, 378422.760948087 5682332.70208242, 378416.073936368 5682345.86577871, 378409.612998868 5682359.89208486, 378409.988975431 5682360.11999013, 378410.374229337 5682360.33983876, 378417.077354337 5682346.07348134, 378417.442588712 5682345.37206533, 378423.152549649 5682348.44817617, 378426.805869962 5682341.77874257, 378434.066123868 5682328.52416494, 378433.075889493 5682328.17345693, 378422.701377774 5682347.37639882, 378417.744834806 5682344.77465322, 378427.323448087 5682326.13408925, 378426.283409024 5682325.76537587))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/19391",
+      "id" : 19391,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 82,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/2544",
+        "id" : 2544,
+        "geo_field" : "SRID=25832;POLYGON ((378450.903999999 5682334.494, 378434.066123868 5682328.52416494, 378432.396201993 5682331.57317617, 378447.862510587 5682339.57128408, 378450.903999999 5682334.494))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/19392",
+      "id" : 19392,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 170,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/2545",
+        "id" : 2545,
+        "geo_field" : "SRID=25832;POLYGON ((378410.643272306 5682328.22851064, 378406.085655118 5682341.30596425, 378416.073936368 5682345.86577871, 378422.760948087 5682332.70208242, 378410.643272306 5682328.22851064))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/19393",
+      "id" : 19393,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 103,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/2546",
+        "id" : 2546,
+        "geo_field" : "SRID=25832;POLYGON ((378426.282920743 5682325.76659658, 378413.127 5682321.101, 378410.643272306 5682328.22851064, 378422.760948087 5682332.70208242, 378426.282920743 5682325.76659658))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/19394",
+      "id" : 19394,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 160,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/2547",
+        "id" : 2547,
+        "geo_field" : "SRID=25832;POLYGON ((378426.805869962 5682341.77874257, 378423.152549649 5682348.44817617, 378417.442588712 5682345.37206533, 378417.077354337 5682346.07348134, 378436.879600431 5682357.88866689, 378441.893760587 5682349.5496166, 378426.805869962 5682341.77874257))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/19395",
+      "id" : 19395,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 81,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/2548",
+        "id" : 2548,
+        "geo_field" : "SRID=25832;POLYGON ((378432.396201993 5682331.57317617, 378430.155967618 5682335.66320302, 378445.471397306 5682343.56273916, 378447.862510587 5682339.57128408, 378432.396201993 5682331.57317617))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/19396",
+      "id" : 19396,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 124,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/2549",
+        "id" : 2549,
+        "geo_field" : "SRID=25832;POLYGON ((378433.075889493 5682328.17302968, 378427.323448087 5682326.13427236, 378417.748741056 5682344.77135732, 378422.701377774 5682347.37639882, 378433.075889493 5682328.17302968))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/19397",
+      "id" : 19397,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 153,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/2550",
+        "id" : 2550,
+        "geo_field" : "SRID=25832;POLYGON ((378406.085655118 5682341.30596425, 378401.351 5682354.89, 378403.27 5682356.052, 378409.612998868 5682359.89208486, 378416.073936368 5682345.86577871, 378406.085655118 5682341.30596425))"
+      }
+    }, {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/19398",
+      "id" : 19398,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 345,
+      "fk_geom" : {
+        "$self" : "/LAGIS.GEOM/2551",
+        "id" : 2551,
+        "geo_field" : "SRID=25832;POLYGON ((378410.374229337 5682360.33922841, 378411.5 5682360.984, 378429.004000001 5682370.998, 378436.879600431 5682357.88866689, 378417.077354337 5682346.07348134, 378410.374229337 5682360.33922841))"
+      }
+    } ]
+  } ],
+  "n_dms_urls" : [ ],
+  "n_nutzungen" : [ {
+    "$self" : "/LAGIS.NUTZUNG/20719",
+    "id" : 20719,
+    "fk_flurstueck" : null,
+    "n_buchungen" : [ {
+      "$self" : "/LAGIS.NUTZUNG_BUCHUNG/23017",
+      "id" : 23017,
+      "bemerkung" : "(Autoanpassung)",
+      "flaeche" : 1401,
+      "gueltig_bis" : 1257855274546,
+      "gueltig_von" : 1227074314804,
+      "ist_buchwert" : true,
+      "quadratmeterpreis" : 12.5783,
+      "fk_anlageklasse" : {
+        "$self" : "/LAGIS.ANLAGEKLASSE/2",
+        "id" : 2,
+        "schluessel" : "k0211100",
+        "bezeichnung" : "Grünflächen - Grundstücke"
+      },
+      "fk_nutzung" : null,
+      "fk_nutzungsart" : {
+        "$self" : "/LAGIS.NUTZUNGSART/275",
+        "id" : 275,
+        "schluessel" : "41008-444",
+        "bezeichnung" : "Siedlung-Kleingarten"
+      }
+    }, {
+      "$self" : "/LAGIS.NUTZUNG_BUCHUNG/26774",
+      "id" : 26774,
+      "bemerkung" : null,
+      "flaeche" : 1401,
+      "gueltig_bis" : 1260957388033,
+      "gueltig_von" : 1257855274546,
+      "ist_buchwert" : false,
+      "quadratmeterpreis" : 12.5783,
+      "fk_anlageklasse" : {
+        "$self" : "/LAGIS.ANLAGEKLASSE/2",
+        "id" : 2,
+        "schluessel" : "k0211100",
+        "bezeichnung" : "Grünflächen - Grundstücke"
+      },
+      "fk_nutzung" : null,
+      "fk_nutzungsart" : {
+        "$self" : "/LAGIS.NUTZUNGSART/275",
+        "id" : 275,
+        "schluessel" : "41008-444",
+        "bezeichnung" : "Siedlung-Kleingarten"
+      }
+    }, {
+      "$self" : "/LAGIS.NUTZUNG_BUCHUNG/27623",
+      "id" : 27623,
+      "bemerkung" : null,
+      "flaeche" : 1401,
+      "gueltig_bis" : null,
+      "gueltig_von" : 1260957388033,
+      "ist_buchwert" : false,
+      "quadratmeterpreis" : 15.0,
+      "fk_anlageklasse" : {
+        "$self" : "/LAGIS.ANLAGEKLASSE/2",
+        "id" : 2,
+        "schluessel" : "k0211100",
+        "bezeichnung" : "Grünflächen - Grundstücke"
+      },
+      "fk_nutzung" : null,
+      "fk_nutzungsart" : {
+        "$self" : "/LAGIS.NUTZUNGSART/275",
+        "id" : 275,
+        "schluessel" : "41008-444",
+        "bezeichnung" : "Siedlung-Kleingarten"
+      }
+    } ]
+  } ],
+  "n_kassenzeichen" : [ ],
+  "n_zusatz_rollen" : [ ],
+  "n_strassenfronten" : [ ],
+  "historyDot" : "digraph G{\n\"Langerfeld 473 21/0\"  [style=\"fill: #eee; font-weight: bold\"];\n}",
+  "mipas" : [ {
+    "$self" : "/LAGIS.MIPA/1239",
+    "id" : 1239,
+    "nutzer" : "Sumrain, Khawla",
+    "lage" : "Clausewitzstr.",
+    "vertragsbeginn" : 1325372400000,
+    "vertragsende" : null,
+    "flaeche" : 153.0,
+    "bemerkung" : "Ziergarten Nr. 6",
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/21931",
+      "id" : 21931,
+      "geo_field" : "SRID=25832;POLYGON ((378450.903999919 5682334.49399957, 378413.12699992 5682321.10099956, 378401.35099992 5682354.88999957, 378403.269999919 5682356.05199956, 378409.98899992 5682360.11999956, 378429.003999921 5682370.99799956, 378440.544999922 5682351.78699956, 378450.903999919 5682334.49399957))"
+    },
+    "aktenzeichen" : "47000549",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/341",
+      "id" : 341,
+      "ausgewaehlte_nummer" : 6,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/14",
+        "id" : 14,
+        "bezeichnung" : "Kleingärten"
+      }
+    },
+    "ar_mipa_merkmale" : [ ]
+  }, {
+    "$self" : "/LAGIS.MIPA/1241",
+    "id" : 1241,
+    "nutzer" : "Wrobel, Marius",
+    "lage" : "Clausewitzstr.",
+    "vertragsbeginn" : 1388530800000,
+    "vertragsende" : null,
+    "flaeche" : 105.0,
+    "bemerkung" : "Ziergarten Nr. 14, ca. 105 m² zus. mit dem Flurstück 160.",
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/21933",
+      "id" : 21933,
+      "geo_field" : "SRID=25832;POLYGON ((378450.903999919 5682334.49399957, 378413.12699992 5682321.10099956, 378401.35099992 5682354.88999957, 378403.269999919 5682356.05199956, 378409.98899992 5682360.11999956, 378429.003999921 5682370.99799956, 378440.544999922 5682351.78699956, 378450.903999919 5682334.49399957))"
+    },
+    "aktenzeichen" : "47000441",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/343",
+      "id" : 343,
+      "ausgewaehlte_nummer" : 14,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/14",
+        "id" : 14,
+        "bezeichnung" : "Kleingärten"
+      }
+    },
+    "ar_mipa_merkmale" : [ ]
+  }, {
+    "$self" : "/LAGIS.MIPA/1244",
+    "id" : 1244,
+    "nutzer" : "Everts, Peter",
+    "lage" : "Clausewitzstr.",
+    "vertragsbeginn" : 1027720800000,
+    "vertragsende" : null,
+    "flaeche" : 128.0,
+    "bemerkung" : "Ziergarten Nr. 11",
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/21936",
+      "id" : 21936,
+      "geo_field" : "SRID=25832;POLYGON ((378450.903999919 5682334.49399957, 378413.12699992 5682321.10099956, 378401.35099992 5682354.88999957, 378403.269999919 5682356.05199956, 378409.98899992 5682360.11999956, 378429.003999921 5682370.99799956, 378440.544999922 5682351.78699956, 378450.903999919 5682334.49399957))"
+    },
+    "aktenzeichen" : "47000464",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/346",
+      "id" : 346,
+      "ausgewaehlte_nummer" : 11,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/14",
+        "id" : 14,
+        "bezeichnung" : "Kleingärten"
+      }
+    },
+    "ar_mipa_merkmale" : [ ]
+  }, {
+    "$self" : "/LAGIS.MIPA/1248",
+    "id" : 1248,
+    "nutzer" : "Merten, Eirich",
+    "lage" : "Clausewitzstr.",
+    "vertragsbeginn" : 1230764400000,
+    "vertragsende" : null,
+    "flaeche" : 167.0,
+    "bemerkung" : "Ziergarten Nr. 9",
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/21938",
+      "id" : 21938,
+      "geo_field" : "SRID=25832;POLYGON ((378450.903999919 5682334.49399957, 378413.12699992 5682321.10099956, 378401.35099992 5682354.88999957, 378403.269999919 5682356.05199956, 378409.98899992 5682360.11999956, 378429.003999921 5682370.99799956, 378440.544999922 5682351.78699956, 378450.903999919 5682334.49399957))"
+    },
+    "aktenzeichen" : "47000462",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/352",
+      "id" : 352,
+      "ausgewaehlte_nummer" : 9,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/14",
+        "id" : 14,
+        "bezeichnung" : "Kleingärten"
+      }
+    },
+    "ar_mipa_merkmale" : [ ]
+  }, {
+    "$self" : "/LAGIS.MIPA/3676",
+    "id" : 3676,
+    "nutzer" : "El Quarroumi, Hassan",
+    "lage" : "Clausewitzstr.",
+    "vertragsbeginn" : 1230764400000,
+    "vertragsende" : null,
+    "flaeche" : 154.0,
+    "bemerkung" : "Ziergarten Nr. 13, ca. 154 m² zus. mit dem Flurstück 160.",
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/23922",
+      "id" : 23922,
+      "geo_field" : "SRID=25832;POLYGON ((378450.903999919 5682334.49399957, 378413.12699992 5682321.10099956, 378401.35099992 5682354.88999957, 378403.269999919 5682356.05199956, 378409.98899992 5682360.11999956, 378429.003999921 5682370.99799956, 378440.544999922 5682351.78699956, 378450.903999919 5682334.49399957))"
+    },
+    "aktenzeichen" : "47000467",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/3422",
+      "id" : 3422,
+      "ausgewaehlte_nummer" : 13,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/14",
+        "id" : 14,
+        "bezeichnung" : "Kleingärten"
+      }
+    },
+    "ar_mipa_merkmale" : [ ]
+  }, {
+    "$self" : "/LAGIS.MIPA/4934",
+    "id" : 4934,
+    "nutzer" : "El Makrini",
+    "lage" : "Clausewitzstr.",
+    "vertragsbeginn" : 1490997600000,
+    "vertragsende" : null,
+    "flaeche" : 170.0,
+    "bemerkung" : null,
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/24976",
+      "id" : 24976,
+      "geo_field" : "SRID=25832;POLYGON ((378450.903999919 5682334.49399957, 378413.12699992 5682321.10099956, 378401.35099992 5682354.88999957, 378403.269999919 5682356.05199956, 378409.98899992 5682360.11999956, 378429.003999921 5682370.99799956, 378440.544999922 5682351.78699956, 378450.903999919 5682334.49399957))"
+    },
+    "aktenzeichen" : "47000820",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/4565",
+      "id" : 4565,
+      "ausgewaehlte_nummer" : 8,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/14",
+        "id" : 14,
+        "bezeichnung" : "Kleingärten"
+      }
+    },
+    "ar_mipa_merkmale" : [ ]
+  }, {
+    "$self" : "/LAGIS.MIPA/4936",
+    "id" : 4936,
+    "nutzer" : "Brucksch, Laura",
+    "lage" : "Clausewitzstr.",
+    "vertragsbeginn" : 1493589600000,
+    "vertragsende" : null,
+    "flaeche" : 150.0,
+    "bemerkung" : "zus. mit Flst.106 u. Flur 475, Flst. 38",
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/24978",
+      "id" : 24978,
+      "geo_field" : "SRID=25832;POLYGON ((378450.903999919 5682334.49399957, 378413.12699992 5682321.10099956, 378401.35099992 5682354.88999957, 378403.269999919 5682356.05199956, 378409.98899992 5682360.11999956, 378429.003999921 5682370.99799956, 378440.544999922 5682351.78699956, 378450.903999919 5682334.49399957))"
+    },
+    "aktenzeichen" : "47000822",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/4568",
+      "id" : 4568,
+      "ausgewaehlte_nummer" : 12,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/14",
+        "id" : 14,
+        "bezeichnung" : "Kleingärten"
+      }
+    },
+    "ar_mipa_merkmale" : [ ]
+  }, {
+    "$self" : "/LAGIS.MIPA/5034",
+    "id" : 5034,
+    "nutzer" : "Everts, Kevin",
+    "lage" : "Clausewitzstr.",
+    "vertragsbeginn" : 1530396000000,
+    "vertragsende" : null,
+    "flaeche" : 106.0,
+    "bemerkung" : null,
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/25069",
+      "id" : 25069,
+      "geo_field" : "SRID=25832;POLYGON ((378450.903999919 5682334.49399957, 378413.12699992 5682321.10099956, 378401.35099992 5682354.88999957, 378403.269999919 5682356.05199956, 378409.98899992 5682360.11999956, 378429.003999921 5682370.99799956, 378440.544999922 5682351.78699956, 378450.903999919 5682334.49399957))"
+    },
+    "aktenzeichen" : "47000882",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/4653",
+      "id" : 4653,
+      "ausgewaehlte_nummer" : 10,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/14",
+        "id" : 14,
+        "bezeichnung" : "Kleingärten"
+      }
+    },
+    "ar_mipa_merkmale" : [ ]
+  }, {
+    "$self" : "/LAGIS.MIPA/5101",
+    "id" : 5101,
+    "nutzer" : "Plazza, Paolo",
+    "lage" : "Clausewitzstr.",
+    "vertragsbeginn" : 1530396000000,
+    "vertragsende" : null,
+    "flaeche" : 300.0,
+    "bemerkung" : null,
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/25136",
+      "id" : 25136,
+      "geo_field" : "SRID=25832;POLYGON ((378450.903999919 5682334.49399957, 378413.12699992 5682321.10099956, 378401.35099992 5682354.88999957, 378403.269999919 5682356.05199956, 378409.98899992 5682360.11999956, 378429.003999921 5682370.99799956, 378440.544999922 5682351.78699956, 378450.903999919 5682334.49399957))"
+    },
+    "aktenzeichen" : "47000893",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/4700",
+      "id" : 4700,
+      "ausgewaehlte_nummer" : 7,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/14",
+        "id" : 14,
+        "bezeichnung" : "Kleingärten"
+      }
+    },
+    "ar_mipa_merkmale" : [ ]
+  } ],
+  "rebes" : [ ]
+}

@@ -1,0 +1,204 @@
+{
+  "$self" : "/LAGIS.FLURSTUECK/23316",
+  "id" : 23316,
+  "bemerkung" : null,
+  "fk_spielplatz" : null,
+  "fk_flurstueck_schluessel" : {
+    "$self" : "/LAGIS.FLURSTUECK_SCHLUESSEL/106729",
+    "id" : 106729,
+    "flur" : 22,
+    "flurstueck_zaehler" : 127,
+    "flurstueck_nenner" : 0,
+    "ist_gesperrt" : false,
+    "bemerkung_sperre" : null,
+    "datum_entstehung" : 1563972259672,
+    "gueltig_bis" : null,
+    "fk_gemarkung" : {
+      "$self" : "/LAGIS.GEMARKUNG/10",
+      "id" : 10,
+      "bezeichnung" : "Vohwinkel",
+      "schluessel" : 3277
+    },
+    "datum_letzter_stadtbesitz" : 1566380533350,
+    "war_staedtisch" : true,
+    "fk_flurstueck_art" : {
+      "$self" : "/LAGIS.FLURSTUECK_ART/1",
+      "id" : 1,
+      "bezeichnung" : "städtisch"
+    },
+    "letzter_bearbeiter" : "SteiniD102@Lagerbuch",
+    "letzte_bearbeitung" : 1566380533350
+  },
+  "in_stadtbesitz" : null,
+  "ar_baeume" : [ ],
+  "ar_vertraege" : [ ],
+  "n_verwaltungsbereiche_eintraege" : [ {
+    "$self" : "/LAGIS.VERWALTUNGSBEREICHE_EINTRAG/25008",
+    "id" : 25008,
+    "fk_flurstueck" : null,
+    "geaendert_am" : 1563972488937,
+    "geaendert_von" : "StoschM102@Lagerbuch",
+    "n_verwaltungsbereiche" : [ {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/21398",
+      "id" : 21398,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/34",
+        "id" : 34,
+        "abkuerzung_abteilung" : "4",
+        "bezeichnung_abteilung" : "",
+        "email_adresse" : null,
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/24",
+          "id" : 24,
+          "bezeichnung" : "Ressort Finanzen",
+          "abkuerzung" : "403"
+        },
+        "n_farben" : [ {
+          "$self" : "/LAGIS.FARBE/60",
+          "id" : 60,
+          "rgb_farbwert" : 12004320,
+          "fk_stil" : {
+            "$self" : "/LAGIS.STIL/1",
+            "id" : 1,
+            "bezeichnung" : "gefüllt"
+          }
+        } ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : 7855,
+      "fk_geom" : null
+    } ]
+  } ],
+  "n_dms_urls" : [ ],
+  "n_nutzungen" : [ {
+    "$self" : "/LAGIS.NUTZUNG/28928",
+    "id" : 28928,
+    "fk_flurstueck" : null,
+    "n_buchungen" : [ {
+      "$self" : "/LAGIS.NUTZUNG_BUCHUNG/37090",
+      "id" : 37090,
+      "bemerkung" : null,
+      "flaeche" : 7807,
+      "gueltig_bis" : null,
+      "gueltig_von" : 1563972489010,
+      "ist_buchwert" : true,
+      "quadratmeterpreis" : 5.0,
+      "fk_anlageklasse" : {
+        "$self" : "/LAGIS.ANLAGEKLASSE/6",
+        "id" : 6,
+        "schluessel" : "k0231100",
+        "bezeichnung" : "Wald u. Forsten - Grundstücke"
+      },
+      "fk_nutzung" : null,
+      "fk_nutzungsart" : {
+        "$self" : "/LAGIS.NUTZUNGSART/286",
+        "id" : 286,
+        "schluessel" : "43002-xx",
+        "bezeichnung" : "Vegetation-Wald"
+      }
+    } ]
+  }, {
+    "$self" : "/LAGIS.NUTZUNG/28929",
+    "id" : 28929,
+    "fk_flurstueck" : null,
+    "n_buchungen" : [ {
+      "$self" : "/LAGIS.NUTZUNG_BUCHUNG/37089",
+      "id" : 37089,
+      "bemerkung" : null,
+      "flaeche" : 34,
+      "gueltig_bis" : null,
+      "gueltig_von" : 1563972489010,
+      "ist_buchwert" : true,
+      "quadratmeterpreis" : 5.0,
+      "fk_anlageklasse" : {
+        "$self" : "/LAGIS.ANLAGEKLASSE/2",
+        "id" : 2,
+        "schluessel" : "k0211100",
+        "bezeichnung" : "Grünflächen - Grundstücke"
+      },
+      "fk_nutzung" : null,
+      "fk_nutzungsart" : {
+        "$self" : "/LAGIS.NUTZUNGSART/293",
+        "id" : 293,
+        "schluessel" : "42001-01",
+        "bezeichnung" : "Verkehr-Straße außerorts"
+      }
+    } ]
+  } ],
+  "n_kassenzeichen" : [ ],
+  "n_zusatz_rollen" : [ ],
+  "n_strassenfronten" : [ {
+    "$self" : "/LAGIS.STRASSENFRONT/2",
+    "id" : 2,
+    "laenge" : 22.0,
+    "strassenname" : "GEPA-Weg"
+  }, {
+    "$self" : "/LAGIS.STRASSENFRONT/3",
+    "id" : 3,
+    "laenge" : 268.0,
+    "strassenname" : "Bahnstr."
+  } ],
+  "historyDot" : "digraph G{\n\"Vohwinkel 22 123/0\"->\"Vohwinkel 22 127/0\" [lineInterpolate=\"linear\"];\n\"Vohwinkel 22 127/0\"  [style=\"fill: #eee; font-weight: bold\"];\n}",
+  "mipas" : [ {
+    "$self" : "/LAGIS.MIPA/4810",
+    "id" : 4810,
+    "nutzer" : "Steinbrück",
+    "lage" : "Bahnstr.",
+    "vertragsbeginn" : 1451602800000,
+    "vertragsende" : 1506722400000,
+    "flaeche" : 600.0,
+    "bemerkung" : "unentgeltliche Nutzung",
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/24863",
+      "id" : 24863,
+      "geo_field" : "SRID=25832;POLYGON ((365461.256999866 5679372.13099948, 365511.283999869 5679332.91599948, 365514.995999867 5679330.00599948, 365511.306999867 5679329.74599948, 365508.191999869 5679328.65499948, 365505.232999866 5679326.81699948, 365502.872999867 5679324.38199948, 365501.417999865 5679322.11399948, 365500.616999866 5679319.75399948, 365500.169999869 5679317.29899948, 365500.142999867 5679315.14799948, 365500.771999867 5679299.59699948, 365483.209999868 5679313.84199948, 365448.287999866 5679342.16799948, 365437.661999867 5679350.78699948, 365432.128999868 5679355.27499948, 365423.726999865 5679334.97299948, 365423.069999867 5679333.40599948, 365421.559999866 5679329.80399948, 365409.716999867 5679301.54699948, 365401.452999868 5679281.83699948, 365394.691999868 5679259.46799948, 365393.986999867 5679257.10599948, 365384.588999868 5679190.43999948, 365375.777999868 5679191.64899948, 365370.787999865 5679192.64599948, 365367.988999867 5679193.70499948, 365365.763999865 5679195.03099948, 365363.646999866 5679196.59299948, 365364.042999864 5679199.46899948, 365362.365999867 5679202.53899948, 365361.324999866 5679206.18999948, 365360.845999867 5679210.36099948, 365360.896999866 5679215.04599948, 365361.321999867 5679219.82099948, 365364.511999869 5679241.62099948, 365366.077999868 5679252.10299948, 365366.823999868 5679261.07899948, 365367.394999866 5679268.57799948, 365368.101999865 5679273.01099948, 365369.584999868 5679283.20499948, 365375.612999865 5679302.42799948, 365382.480999865 5679319.09199948, 365393.610999868 5679346.09699948, 365395.276999866 5679350.13999948, 365399.793999867 5679361.09799948, 365411.158999869 5679388.67499948, 365437.043999867 5679451.47399948, 365437.615999867 5679450.85399948, 365461.564999868 5679424.90899948, 365463.559999866 5679422.74699948, 365475.905999867 5679409.37199948, 365491.373999865 5679392.61499948, 365476.973999867 5679382.82099948, 365461.256999866 5679372.13099948))"
+    },
+    "aktenzeichen" : "00000",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/4506",
+      "id" : 4506,
+      "ausgewaehlte_nummer" : null,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/15",
+        "id" : 15,
+        "bezeichnung" : "Landwirtschaftliche Nutzung"
+      }
+    },
+    "ar_mipa_merkmale" : [ {
+      "$self" : "/LAGIS.MIPA_MERKMAL/1",
+      "id" : 1,
+      "bezeichnung" : "Unentgeltlich"
+    } ]
+  }, {
+    "$self" : "/LAGIS.MIPA/4959",
+    "id" : 4959,
+    "nutzer" : "Steinbrück, Haiko",
+    "lage" : "Bahnstr.",
+    "vertragsbeginn" : 1483225200000,
+    "vertragsende" : 1514761200000,
+    "flaeche" : null,
+    "bemerkung" : "unentgeltliche Nutzung",
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/24995",
+      "id" : 24995,
+      "geo_field" : "SRID=25832;POLYGON ((365438.184999866 5679356.45099948, 365434.100999867 5679353.67499948, 365432.128999868 5679355.27499948, 365423.726999865 5679334.97299948, 365423.069999867 5679333.40599948, 365421.559999866 5679329.80399948, 365409.716999867 5679301.54699948, 365401.452999868 5679281.83699948, 365394.691999868 5679259.46799948, 365393.986999867 5679257.10599948, 365384.588999868 5679190.43999948, 365375.777999868 5679191.64899948, 365370.787999865 5679192.64599948, 365367.988999867 5679193.70499948, 365365.763999865 5679195.03099948, 365363.646999866 5679196.59299948, 365364.042999864 5679199.46899948, 365362.365999867 5679202.53899948, 365361.324999866 5679206.18999948, 365360.845999867 5679210.36099948, 365360.896999866 5679215.04599948, 365361.321999867 5679219.82099948, 365364.511999869 5679241.62099948, 365366.077999868 5679252.10299948, 365366.823999868 5679261.07899948, 365367.394999866 5679268.57799948, 365368.101999865 5679273.01099948, 365369.584999868 5679283.20499948, 365375.612999865 5679302.42799948, 365382.480999865 5679319.09199948, 365393.610999868 5679346.09699948, 365395.276999866 5679350.13999948, 365399.793999867 5679361.09799948, 365411.158999869 5679388.67499948, 365437.043999867 5679451.47399948, 365437.615999867 5679450.85399948, 365461.564999868 5679424.90899948, 365463.559999866 5679422.74699948, 365475.905999867 5679409.37199948, 365491.373999865 5679392.61499948, 365476.973999867 5679382.82099948, 365461.256999866 5679372.13099948, 365460.359999867 5679371.52099948, 365438.184999866 5679356.45099948))"
+    },
+    "aktenzeichen" : "00000",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/4583",
+      "id" : 4583,
+      "ausgewaehlte_nummer" : null,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/15",
+        "id" : 15,
+        "bezeichnung" : "Landwirtschaftliche Nutzung"
+      }
+    },
+    "ar_mipa_merkmale" : [ {
+      "$self" : "/LAGIS.MIPA_MERKMAL/1",
+      "id" : 1,
+      "bezeichnung" : "Unentgeltlich"
+    } ]
+  } ],
+  "rebes" : [ ]
+}
