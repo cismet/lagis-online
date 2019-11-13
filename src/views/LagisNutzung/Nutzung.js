@@ -1,20 +1,43 @@
 import React, {Component} from 'react';
 import {
-  Breadcrumb,
-  BreadcrumbItem,
   Card,
   CardBody,
   CardHeader,
   Col,
   Row
 } from 'reactstrap';
+import NutzungTabelle from './NutzungTabelle.js';
+import NKFTabelle from './NKFTabelle.js';
 
-class Breadcrumbs extends Component {
-  render() {
-    return (
-      <div className="animated fadeIn"></div>
-    );
-  }
+const Nutzung = () => {
+  return  (
+    <div className="animated fadeIn">
+        <Row>
+            <Col>
+                <Card>
+                    <CardHeader>
+                        <i className="fa fa-align-justify"></i> Rechte und Belastungen
+                    </CardHeader>
+                    <CardBody>
+                        <NutzungTabelle />
+                    </CardBody>
+                </Card>
+            </Col>
+        </Row>
+        <Row>
+            <Col>
+                <Card>
+                    <CardHeader>
+                        <i className="fa fa-align-justify"></i> NKF Übersicht
+                    </CardHeader>
+                    <CardBody>
+                        <NKFTabelle />
+                    </CardBody>
+                </Card>
+            </Col>
+        </Row>
+    </div>)
 }
 
-export default Breadcrumbs;
+
+export default Nutzung;
