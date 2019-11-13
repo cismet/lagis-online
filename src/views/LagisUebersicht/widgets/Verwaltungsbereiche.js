@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import NumberWidget from './NumberWidget';
 
 // Since this component is simple and static, there's no parent container for
@@ -7,15 +6,15 @@ import NumberWidget from './NumberWidget';
 const Comp = ({}) => {
 	return (
 		<NumberWidget
-			bgcolor='bg-info'
-			linkTo='/#/verwaltungsbereiche'
-			title='Verwaltungsbereiche'
-			subtitle='& Rollen'
-			icon='fa fa-folder-open'
-			number=''
+			bgcolor="bg-info"
+			linkTo="/#/verwaltungsbereiche"
+			title="Verwaltungsbereiche"
+			subtitle="& Rollen"
+			icon="fa fa-folder-open"
+			number=""
 			additionalContent={
 				<table
-					width='100%'
+					width="100%"
 					style={{
 						marginLeft: '10px'
 					}}

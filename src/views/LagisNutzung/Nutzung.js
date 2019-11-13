@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
+import React from 'react';
+import { Col, Row } from 'reactstrap';
 import NutzungTabelle from './NutzungTabelle.js';
 import NKFTabelle from './NKFTabelle.js';
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import CustomTable from './CustomTable';
-import LagisMap from './LagisMap';
 
 storiesOf('CustomTable', module)
 	.add('CustomTable With 0 entries', () => {
