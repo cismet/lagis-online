@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
+import { Col, Row } from 'reactstrap';
 import VertraegeTabelle from './VertraegeTabelle.js';
 import jsonData from './../../assets/json/fs_18082.json';
 import VertragDetails from './VertragDetails.js';
 
 const extractVertragById = (flurstueck, id) => {
-	var mipas = flurstueck.mipas;
+	var vertraege = flurstueck.ar_vertraege;
 
-	if (mipas != null) {
-		for (var index = 0; index < mipas.length; ++index) {
-			if (mipas[index].id === id) {
-				return mipas[index];
+	if (vertraege != null) {
+		for (var index = 0; index < vertraege.length; ++index) {
+			if (vertraege[index].id === id) {
+				return vertraege[index];
 			}
 		}
 	}
@@ -33,14 +33,7 @@ const Vorgaenge = () => {
 		<div className="animated fadeIn">
 			<Row>
 				<Col>
-					<Card>
-						<CardHeader>
-							<i className="fa fa-align-justify" /> Dienststellen
-						</CardHeader>
-						<CardBody>
-							<VertraegeTabelle flurstueck={jsonData} selectionListener={vertragListener} />
-						</CardBody>
-					</Card>
+					<VertraegeTabelle flurstueck={jsonData} selectionListener={vertragListener} />
 				</Col>
 			</Row>
 			<Row>

@@ -89,7 +89,7 @@ const MipaTabelle = ({ flurstueck: flData, selectionListener: listener }) => {
 
 	return (
 		<CustomTable
-			cardTitle="Dienststellen"
+			cardTitle="Vermietung/Verpachtung"
 			data={extractMipas(flData)}
 			columns={columnsMipa}
 			rowSelectionListener={selectionListener}

@@ -12,9 +12,12 @@ import {
   NavItem,
   NavLink,
   TabContent,
-  TabPane
+  TabPane,
+  Form
 } from 'reactstrap';
 import KostenTabelle from './KostenTabelle.js'
+import BeschlussTabelle from './BeschlussTabelle.js'
+import formattedDateString from '../Commons/DateHelper.js';
 
 const toggle = (tabPane, tab, activeTab, setActiveTab) => {
     const newArray = activeTab.slice()
@@ -29,18 +32,21 @@ const tabPane = (data) => {
             <div>Querverweise</div>
         </TabPane>
         <TabPane tabId="2">
-            <div>Kostentabelle</div>
+            <KostenTabelle vertrag={data}/>
         </TabPane>
         <TabPane tabId="3">
-            <div>BeschlussTabelle</div>
+        <BeschlussTabelle vertrag={data}/>
         </TabPane>
       </>
     );
   }
 
-
 const VertragDetails = ({vertrag: data}) => {
     const [activeTab, setActiveTab] = useState(new Array(4).fill('1'));
+
+    if (data === null || data === undefined) {
+        data = {};
+    }
 
     return (
       <div>
@@ -51,10 +57,44 @@ const VertragDetails = ({vertrag: data}) => {
                       <i className="fa fa-align-justify"></i>Voreigentümer
                   </CardHeader>
                   <CardBody>
-                    <FormGroup row>
-                      <Col>
-                      </Col>
-                    </FormGroup>
+                <Form action="" method="post" className="form-horizontal">
+                <FormGroup row>
+                    <Col xs="12">
+                      <Label htmlFor="voreigentuemer">Voreigentümer</Label>
+                      <Input type="text" id="voreigentuemer" value={data.vertragspartner}/>
+                    </Col>
+                  </FormGroup>
+                  <FormGroup row>
+                    <Col xs="7">
+                    <Label htmlFor="kaufpreis">Kaufpreis (inkl.Nebenkosten)</Label>
+                      <Input type="text" id="kaufpreis" value={data.gesamtpreis}/>
+                    </Col>
+                    <Col xs="5">
+                    <Label htmlFor="auflassung">Auflassung</Label>
+                      <Input type="text" id="auflassung" value={formattedDateString(data.datum_auflassung)}/>
+                    </Col>
+                  </FormGroup>
+                  <FormGroup row>
+                    <Col xs="7">
+                    <Label htmlFor="quadratmeterpreis">Quadratmeterpreis</Label>
+                      <Input type="text" id="quadratmeterpreis" value={data.quadratmeterpreis}/>
+                    </Col>
+                    <Col xs="5">
+                    <Label htmlFor="eintragung">Eintragung</Label>
+                      <Input type="text" id="eintragung" value={formattedDateString(data.datum_eintragung)}/>
+                    </Col>
+                  </FormGroup>
+                  <FormGroup row>
+                    <Col xs="7">
+                    <Label htmlFor="vertragsart">Vertragsart</Label>
+                      <Input type="text" id="vertragsart" value={(data.fk_vertragsart != null ? data.fk_vertragsart.bezeichnung : "")}/>
+                    </Col>
+                    <Col xs="5">
+                    <Label htmlFor="aktenzeichen">Aktenzeichen</Label>
+                      <Input type="text" id="aktenzeichen" value={data.aktenzeichen} />
+                    </Col>
+                  </FormGroup>
+                </Form>
                   </CardBody>
               </Card>
           </Col>

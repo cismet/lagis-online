@@ -34,16 +34,6 @@ const Mipa = () => {
 		<div className="animated fadeIn">
 			<Row>
 				<Col>
-					<MipaTabelle flurstueck={jsonData} selectionListener={mipaListener} />
-				</Col>
-			</Row>
-			<Row>
-				<Col>
-					<MipaDetail mipa={selectedMipa} />
-				</Col>
-			</Row>
-			<Row>
-				<Col>
 					<Card>
 						<CardHeader>
 							<i className="fa fa-align-justify" /> Karte
@@ -52,6 +42,16 @@ const Mipa = () => {
 							<LagisMap />
 						</CardBody>
 					</Card>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<MipaTabelle flurstueck={jsonData} selectionListener={mipaListener} />
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<MipaDetail mipa={selectedMipa} />
 				</Col>
 			</Row>
 		</div>

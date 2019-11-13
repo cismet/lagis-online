@@ -1,73 +1,52 @@
-import React, { useState } from 'react';
-import "react-table/react-table.css";
+import React from 'react';
+import 'react-table/react-table.css';
 import CustomTable from '../Commons/CustomTable';
-import formattedDateString from '../Commons/DateHelper.js'
-
+import formattedDateString from '../Commons/DateHelper.js';
 
 const extractKosten = (vertrag) => {
-    var kostenArray = [];
-    var kosten = vertrag.n_kosten;
+	var kostenArray = [];
 
-    if (kosten != null) {
-        for (var index = 0; index < kosten.length; ++index) {
-            var kostenObject = {};
-            kostenObject.betrag = kosten[index].betrag;
+	if (vertrag != null) {
+		var kosten = vertrag.n_kosten;
 
-            if (kosten[index].fk_kostenart != null) {
-                kostenObject.kostenart = kosten[index].fk_kostenart.bezeichnung;
-            }
+		if (kosten != null) {
+			for (var index = 0; index < kosten.length; ++index) {
+				var kostenObject = {};
+				kostenObject.betrag = kosten[index].betrag.toFixed(2) + ' €';
 
-            if (kosten[index].datum != null) {
-                kostenObject.anweisung = formattedDateString(new Date(kosten[index].datum));
-            }
+				if (kosten[index].fk_kostenart != null) {
+					kostenObject.kostenart = kosten[index].fk_kostenart.bezeichnung;
+				}
 
-            kostenArray.push(kostenObject);
-        }
-    }
-    return kostenArray;    
-}
+				if (kosten[index].datum != null) {
+					kostenObject.anweisung = formattedDateString(new Date(kosten[index].datum));
+				}
 
-const KostenTabelle = ({vertrag: data, selectionListener: listener}) => {
-    const columnsMipa = [{
-        Header: 'Kostenart',
-        accessor: 'kostenart'
-      }, {
-        Header: 'Betrag',
-        accessor: 'betrag'
-      }, {
-        Header: 'Anweisung',
-        accessor: 'anweisung'
-      }];
-    const [selectedRow, setSelectedRow] = useState(-1);
-    
-    const selectionListener = (index) => {
-        var newIndex = index;
+				kostenArray.push(kostenObject);
+			}
+		}
+	}
 
-        if (index === selectedRow) {
-            newIndex = -1;
-        }
+	return kostenArray;
+};
 
-        setSelectedRow(newIndex)
+const KostenTabelle = ({ vertrag: data }) => {
+	const columnsKosten = [
+		{
+			Header: 'Kostenart',
+			accessor: 'kostenart'
+		},
+		{
+			Header: 'Betrag',
+			accessor: 'betrag'
+		},
+		{
+			Header: 'Anweisung',
+			accessor: 'anweisung'
+		}
+	];
 
-        if (listener != null) {
-            if (newIndex !== -1) {
-                listener(extractKosten(data)[newIndex].id);
-            } else {
-                listener(null);
-            }
-        }
-    };
-
-    return (
-            <CustomTable
-            data={extractKosten(data)}
-            columns={columnsMipa}
-            rowSelectionListener={selectionListener}
-            selectedRow={selectedRow}
-            />
-        )
-    
-}
-
+	return <CustomTable data={extractKosten(data)} columns={columnsKosten} />;
+};
 
 export default KostenTabelle;
