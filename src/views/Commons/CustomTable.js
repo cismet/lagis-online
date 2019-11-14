@@ -99,7 +99,8 @@ const CustomTable = ({
 	selectedRow: selectedIndex,
 	buttons: buttonsEnabled,
 	additionalButtons: buttons,
-	cardTitle: title
+	cardTitle: title,
+	style: customStyle
 }) => {
 	const rowsPerPage = 5;
 	const [ page, setPage ] = useState(0);
@@ -108,14 +109,24 @@ const CustomTable = ({
 		buttonsEnabled = true;
 	}
 
+	//no buttons should be shown for the moment
+	buttonsEnabled = false;
+
+	const tableRows = createRows(cols, d, page * rowsPerPage, rowsPerPage, listener, selectedIndex);
+
 	const table = (
-		<div>
+		<div style={customStyle}>
 			<Table responsive striped hover>
 				<thead>
 					<tr>{createHeader(cols)}</tr>
 				</thead>
-				<tbody>{createRows(cols, d, page * rowsPerPage, rowsPerPage, listener, selectedIndex)}</tbody>
+				<tbody>{tableRows}</tbody>
 			</Table>
+			{tableRows.length === 0 && (
+				<div style={{ width: '100%', textAlign: 'center', backgroundColor: 'lightGrey' }}>
+					Keine Daten gefunden
+				</div>
+			)}
 			<Row>
 				<Col xs="12" lg="6">
 					{createPagination(page, d.length, rowsPerPage, setPage)}
@@ -141,7 +152,7 @@ const CustomTable = ({
 
 	if (title != null) {
 		return (
-			<Card>
+			<Card style={customStyle}>
 				<CardHeader style={{ display: 'inline-flex' }}>
 					<i style={{ margin: 'auto' }} className="fa fa-align-justify" />{' '}
 					<span style={{ margin: 'auto', textAlign: 'left' }}>&nbsp;{title}</span>
