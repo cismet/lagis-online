@@ -1,6 +1,5 @@
 import React from 'react';
 import CustomTable from '../Commons/CustomTable';
-import jsonData from './../../assets/json/fs_17778.json';
 import formattedDateString from '../Commons/DateHelper.js';
 import { Button } from 'reactstrap';
 
@@ -22,7 +21,7 @@ const extractKassenzeichen = (flurstueck) => {
 	return kzs;
 };
 
-const KassenzeichenTabelle = () => {
+const KassenzeichenTabelle = ({ flurstueck: data }) => {
 	const columns = [
 		{
 			Header: 'Kassenzeichen',
@@ -42,7 +41,7 @@ const KassenzeichenTabelle = () => {
 	return (
 		<CustomTable
 			cardTitle="Kassenzeichen"
-			data={extractKassenzeichen(jsonData)}
+			data={extractKassenzeichen(data)}
 			columns={columns}
 			additionalButtons={buttons}
 		/>

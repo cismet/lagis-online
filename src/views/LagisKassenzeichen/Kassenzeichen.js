@@ -2,13 +2,14 @@ import React from 'react';
 import KassenzeichenTabelle from './KassenzeichenTabelle.js';
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import LagisMap from '../Commons/LagisMap';
+import jsonData from './../../assets/json/fs_17778.json';
 
 const Kassenzeichen = () => {
 	return (
 		<div className="animated fadeIn">
 			<Row>
 				<Col>
-					<KassenzeichenTabelle />
+					<KassenzeichenTabelle flurstueck={jsonData} />
 				</Col>
 			</Row>
 			<Row>
