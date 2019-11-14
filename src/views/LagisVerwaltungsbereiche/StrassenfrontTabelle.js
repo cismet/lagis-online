@@ -18,7 +18,7 @@ const extractStrassenfront = (flurstueck) => {
 	return strassenfronten;
 };
 
-const StrassenfrontTabelle = ({ flurstueck: flData }) => {
+const StrassenfrontTabelle = ({ flurstueck: flData, style: customStyle }) => {
 	const columnsStrasse = [
 		{
 			Header: 'Straße',
@@ -30,7 +30,14 @@ const StrassenfrontTabelle = ({ flurstueck: flData }) => {
 		}
 	];
 
-	return <CustomTable cardTitle="Straßenfronten" data={extractStrassenfront(flData)} columns={columnsStrasse} />;
+	return (
+		<CustomTable
+			style={customStyle}
+			cardTitle="Straßenfronten"
+			data={extractStrassenfront(flData)}
+			columns={columnsStrasse}
+		/>
+	);
 };
 
 export default StrassenfrontTabelle;

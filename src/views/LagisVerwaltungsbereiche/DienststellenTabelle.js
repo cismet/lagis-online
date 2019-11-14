@@ -24,7 +24,7 @@ const extractDienststelle = (flurstueck) => {
 	return dienststellen;
 };
 
-const DienststellenTabelle = ({ flurstueck: flData }) => {
+const DienststellenTabelle = ({ flurstueck: flData, style: customStyle }) => {
 	const columnsDienststellen = [
 		{
 			Header: 'Dienststelle',
@@ -87,8 +87,9 @@ const DienststellenTabelle = ({ flurstueck: flData }) => {
 	];
 
 	return (
-		<div>
+		<div style={customStyle}>
 			<CustomTable
+				style={customStyle}
 				cardTitle="Dienststellen"
 				data={extractDienststelle(flData)}
 				columns={columnsDienststellen}

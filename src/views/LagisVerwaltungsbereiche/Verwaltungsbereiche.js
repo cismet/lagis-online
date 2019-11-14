@@ -7,7 +7,7 @@ import { FormGroup, Label, Input, Card, CardBody, CardHeader, Col, Row } from 'r
 import LagisMap from '../Commons/LagisMap';
 import GetMapSize from '../Commons/SizeHelper.js';
 import jsonData from './../../assets/json/fs_22726.json';
-import './test.css';
+import '../viewStyle.css';
 //import jsonData from './../../assets/json/fs_23316.json';
 
 const Verwaltungsbereiche = () => {
@@ -30,13 +30,13 @@ const Verwaltungsbereiche = () => {
 					</Row>
 					<Row>
 						<Col lg="4">
-							<RollenTabelle flurstueck={jsonData} />
+							<RollenTabelle style={{ height: '90%' }} flurstueck={jsonData} />
 						</Col>
 						<Col lg="4">
-							<StrassenfrontTabelle flurstueck={jsonData} />
+							<StrassenfrontTabelle style={{ height: '90%' }} flurstueck={jsonData} />
 						</Col>
 						<Col lg="4">
-							<Card>
+							<Card style={{ height: '90%' }}>
 								<CardHeader>
 									<i className="fa fa-align-justify" /> Bemerkungen/Sperre
 								</CardHeader>

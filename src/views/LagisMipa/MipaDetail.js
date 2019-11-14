@@ -103,7 +103,7 @@ const MipaDetail = ({ mipa: data }) => {
 						</CardHeader>
 						<CardBody>
 							<FormGroup row>
-								<div style={{ height: '105px' }}>
+								<div style={{ height: '105px', marginLeft: '40px' }}>
 									<div>Langerfeld 450 46/0</div>
 									<div>Langerfeld 449 118/0</div>
 									<div>Langerfeld 449 126/0</div>

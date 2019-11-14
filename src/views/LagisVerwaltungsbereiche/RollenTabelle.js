@@ -18,7 +18,7 @@ const extractRollen = (flurstueck) => {
 	return rollen;
 };
 
-const RollenTabelle = ({ flurstueck: flData }) => {
+const RollenTabelle = ({ flurstueck: flData, style: customStyle }) => {
 	const columnsRollen = [
 		{
 			Header: 'Dienststelle',
@@ -31,7 +31,7 @@ const RollenTabelle = ({ flurstueck: flData }) => {
 	];
 
 	const data = extractRollen(flData);
-	return <CustomTable cardTitle="zusätzliche&nbsp;Rollen" data={data} columns={columnsRollen} />;
+	return <CustomTable style={customStyle} cardTitle="zusätzliche&nbsp;Rollen" data={data} columns={columnsRollen} />;
 };
 
 export default RollenTabelle;
