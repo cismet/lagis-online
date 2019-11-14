@@ -35,7 +35,6 @@ const MipaDetail = ({ mipa: data }) => {
 											id="ckUnentgeltlich"
 											name="checkbox1"
 											value="unentgeltlich"
-											readOnly
 											checked={merkmalExists('Unentgeltlich', data)}
 										/>
 										<span style={{ verticalAlign: 'middle', paddingTop: '5px' }}>
@@ -54,7 +53,6 @@ const MipaDetail = ({ mipa: data }) => {
 											id="ckKeineAkte"
 											name="checkbox2"
 											value="keineAkte"
-											readOnly
 											checked={merkmalExists('keine Akte', data)}
 										/>
 										<span style={{ verticalAlign: 'middle', paddingTop: '5px' }}>keine Akte</span>
@@ -66,7 +64,6 @@ const MipaDetail = ({ mipa: data }) => {
 											id="ckAltlast"
 											name="checkbox3"
 											value="Altlast"
-											readOnly
 											checked={merkmalExists('Altlast', data)}
 										/>
 										<span style={{ verticalAlign: 'middle', paddingTop: '5px' }}>Altlast</span>
@@ -78,7 +75,6 @@ const MipaDetail = ({ mipa: data }) => {
 											id="ckBiotop"
 											name="checkbox3"
 											value="biotop"
-											readOnly
 											checked={merkmalExists('Biotop', data)}
 										/>
 										<span style={{ verticalAlign: 'middle', paddingTop: '5px' }}>Biotop</span>
@@ -90,7 +86,6 @@ const MipaDetail = ({ mipa: data }) => {
 											id="ckGestaltung"
 											name="checkbox3"
 											value="gestaltung"
-											readOnly
 											checked={merkmalExists('Gestaltung', data)}
 										/>
 										<span style={{ verticalAlign: 'middle', paddingTop: '5px' }}>Gestaltung</span>
