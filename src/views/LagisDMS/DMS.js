@@ -1,20 +1,10 @@
-import React, {Component} from 'react';
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Card,
-  CardBody,
-  CardHeader,
-  Col,
-  Row
-} from 'reactstrap';
+import React, { Component } from 'react';
+import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
+import FilePanel from '../Commons/FilePanel.js';
+import jsonData from './../../assets/json/fs_17778.json';
 
-class Breadcrumbs extends Component {
-  render() {
-    return (
-      <div className="animated fadeIn"></div>
-    );
-  }
-}
+const DMS = () => {
+	return <FilePanel dmsUrls={jsonData} />;
+};
 
-export default Breadcrumbs;
+export default DMS;
