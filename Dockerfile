@@ -22,7 +22,7 @@ RUN yarn cache clean
 COPY . .
 RUN VERSION=`cat .version`; sed -i "s/%LAGIS_ONLINE_VERSION%/$VERSION/" src/constants/versions.js
 RUN HASH=`cat .githash`; sed -i "s/%LAGIS_ONLINE_HASH%/$HASH/" src/constants/versions.js
-RUN yarn run build
+RUN yarn --max_old_space_size=4096 run build
 
 # ---
 
