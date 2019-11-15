@@ -106,11 +106,8 @@ const CustomTable = ({
 	const [ page, setPage ] = useState(0);
 
 	if (buttonsEnabled === undefined) {
-		buttonsEnabled = true;
+		buttonsEnabled = false;
 	}
-
-	//no buttons should be shown for the moment
-	buttonsEnabled = false;
 
 	const tableRows = createRows(cols, d, page * rowsPerPage, rowsPerPage, listener, selectedIndex);
 
