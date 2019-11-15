@@ -63,7 +63,8 @@ const RebeTabelle = ({ flurstueck: data, selectionListener: listener }) => {
 		}
 	];
 
-	const [ selectedRow, setSelectedRow ] = useState(-1);
+	var rebes = extractRebe(data);
+	const [ selectedRow, setSelectedRow ] = useState(rebes != null && rebes.length > 0 ? 0 : -1);
 
 	const selectionListener = (index) => {
 		var newIndex = index;
@@ -91,7 +92,7 @@ const RebeTabelle = ({ flurstueck: data, selectionListener: listener }) => {
 
 	return (
 		<CustomTable
-			data={extractRebe(data)}
+			data={rebes}
 			cardTitle="Rechte&nbsp;und&nbsp;Belastungen"
 			columns={columns}
 			additionalButtons={buttons}

@@ -42,7 +42,8 @@ const VertraegeTabelle = ({ flurstueck: flData, selectionListener: listener }) =
 			accessor: 'gesamtpreis'
 		}
 	];
-	const [ selectedRow, setSelectedRow ] = useState(-1);
+	var vertraege = extractVertraege(flData);
+	const [ selectedRow, setSelectedRow ] = useState(vertraege != null && vertraege.length > 0 ? 0 : -1);
 
 	const selectionListener = (index) => {
 		var newIndex = index;
@@ -62,10 +63,16 @@ const VertraegeTabelle = ({ flurstueck: flData, selectionListener: listener }) =
 		}
 	};
 
+	if (selectedRow !== -1) {
+		listener(extractVertraege(flData)[selectedRow].id);
+	} else {
+		listener(null);
+	}
+
 	return (
 		<CustomTable
 			cardTitle="Verträge"
-			data={extractVertraege(flData)}
+			data={vertraege}
 			columns={columnsMipa}
 			rowSelectionListener={selectionListener}
 			selectedRow={selectedRow}

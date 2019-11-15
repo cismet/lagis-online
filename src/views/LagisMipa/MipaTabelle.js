@@ -66,7 +66,8 @@ const MipaTabelle = ({ flurstueck: flData, selectionListener: listener }) => {
 			accessor: 'vertragsende'
 		}
 	];
-	const [ selectedRow, setSelectedRow ] = useState(-1);
+	var mipas = extractMipas(flData);
+	const [ selectedRow, setSelectedRow ] = useState(mipas != null && mipas.length > 0 ? 0 : -1);
 
 	const selectionListener = (index) => {
 		var newIndex = index;
@@ -86,10 +87,16 @@ const MipaTabelle = ({ flurstueck: flData, selectionListener: listener }) => {
 		}
 	};
 
+	if (selectedRow !== -1) {
+		listener(extractMipas(flData)[selectedRow].id);
+	} else {
+		listener(null);
+	}
+
 	return (
 		<CustomTable
 			cardTitle="Vermietung/Verpachtung"
-			data={extractMipas(flData)}
+			data={mipas}
 			columns={columnsMipa}
 			rowSelectionListener={selectionListener}
 			selectedRow={selectedRow}

@@ -29,7 +29,13 @@ const tabPane = (data) => {
 	return (
         <>
 			<TabPane tabId="1">
-				<div>Querverweise</div>
+                {data.n_kosten != null &&
+                    <div>
+                        <div>Langerfeld 450 46/0</div>
+                        <div>Langerfeld 449 118/0</div>
+                        <div>Langerfeld 449 126/0</div>
+                    </div>
+                }
 			</TabPane>
 			<TabPane tabId="2">
 				<KostenTabelle vertrag={data} />
