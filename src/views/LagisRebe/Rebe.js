@@ -8,11 +8,6 @@ const Rebe = () => {
 		<div className="animated fadeIn">
 			<Row>
 				<Col>
-					<RebeTabelle />
-				</Col>
-			</Row>
-			<Row>
-				<Col>
 					<Card>
 						<CardHeader>
 							<i className="fa fa-align-justify" /> Karte
@@ -21,6 +16,11 @@ const Rebe = () => {
 							<LagisMap />
 						</CardBody>
 					</Card>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<RebeTabelle />
 				</Col>
 			</Row>
 		</div>

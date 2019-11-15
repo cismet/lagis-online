@@ -9,11 +9,6 @@ const Kassenzeichen = () => {
 		<div className="animated fadeIn">
 			<Row>
 				<Col>
-					<KassenzeichenTabelle flurstueck={jsonData} />
-				</Col>
-			</Row>
-			<Row>
-				<Col>
 					<Card>
 						<CardHeader>
 							<i className="fa fa-align-justify" /> Karte
@@ -22,6 +17,11 @@ const Kassenzeichen = () => {
 							<LagisMap />
 						</CardBody>
 					</Card>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<KassenzeichenTabelle flurstueck={jsonData} />
 				</Col>
 			</Row>
 		</div>
