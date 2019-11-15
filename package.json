@@ -1,6 +1,6 @@
 {
 	"name": "lagis-online",
-	"version": "0.1.0-SNAPSHOT.6",
+	"version": "0.1.0-SNAPSHOT.7",
 	"private": true,
 	"config": {
 		"dockerRegistryPath": "cismet"
