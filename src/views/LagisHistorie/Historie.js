@@ -1,20 +1,9 @@
-import React, {Component} from 'react';
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Card,
-  CardBody,
-  CardHeader,
-  Col,
-  Row
-} from 'reactstrap';
+import React from 'react';
+import GraphPanel from '../Commons/GraphPanel';
+import jsonData from './../../assets/json/fs_17778.json';
 
-class Breadcrumbs extends Component {
-  render() {
-    return (
-      <div className="animated fadeIn"></div>
-    );
-  }
-}
+const History = () => {
+	return <GraphPanel graphCode={jsonData.historyDot} />;
+};
 
-export default Breadcrumbs;
+export default History;

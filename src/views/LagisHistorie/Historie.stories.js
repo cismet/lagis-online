@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { action } from '@storybook/addon-actions';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
+import History from './Historie.js';
 
-storiesOf('History', module).add('First Story', () => <h1>First</h1>);
+storiesOf('History', module).add('First Story', () => <History />);
