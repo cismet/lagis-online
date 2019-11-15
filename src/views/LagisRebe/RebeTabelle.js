@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CustomTable from '../Commons/CustomTable';
-import jsonData from './../../assets/json/fs_22726.json';
 import formattedDateString from '../Commons/DateHelper.js';
 import { Button } from 'reactstrap';
 
@@ -12,6 +11,7 @@ const extractRebe = (flurstueck) => {
 		for (var index = 0; index < rebes.length; ++index) {
 			var rebe = {};
 			rebe.ist_recht = rebes[index].ist_recht;
+			rebe.id = rebes[index].id;
 			if (rebes[index].fk_rebe_art != null) {
 				rebe.art = rebes[index].fk_rebe_art.bezeichnung;
 			}
@@ -31,7 +31,7 @@ const extractRebe = (flurstueck) => {
 	return res;
 };
 
-const KassenzeichenTabelle = () => {
+const RebeTabelle = ({ flurstueck: data, selectionListener: listener }) => {
 	const columns = [
 		{
 			Header: 'ist Recht',
@@ -63,6 +63,26 @@ const KassenzeichenTabelle = () => {
 		}
 	];
 
+	const [ selectedRow, setSelectedRow ] = useState(-1);
+
+	const selectionListener = (index) => {
+		var newIndex = index;
+
+		if (index === selectedRow) {
+			newIndex = -1;
+		}
+
+		setSelectedRow(newIndex);
+
+		if (listener != null) {
+			if (newIndex !== -1) {
+				listener(extractRebe(data)[newIndex].id);
+			} else {
+				listener(null);
+			}
+		}
+	};
+
 	const buttons = (
 		<Button>
 			<i className="fa fa-undo fa-lg" />
@@ -71,12 +91,14 @@ const KassenzeichenTabelle = () => {
 
 	return (
 		<CustomTable
-			data={extractRebe(jsonData)}
+			data={extractRebe(data)}
 			cardTitle="Rechte&nbsp;und&nbsp;Belastungen"
 			columns={columns}
 			additionalButtons={buttons}
+			rowSelectionListener={selectionListener}
+			selectedRow={selectedRow}
 		/>
 	);
 };
 
-export default KassenzeichenTabelle;
+export default RebeTabelle;
