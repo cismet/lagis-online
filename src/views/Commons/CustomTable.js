@@ -113,16 +113,16 @@ const CustomTable = ({
 
 	const table = (
 		<div style={customStyle}>
-			<Table responsive striped hover>
-				<thead>
-					<tr>{createHeader(cols)}</tr>
-				</thead>
-				<tbody>{tableRows}</tbody>
-			</Table>
+			{tableRows.length > 0 && (
+				<Table responsive striped hover>
+					<thead>
+						<tr>{createHeader(cols)}</tr>
+					</thead>
+					<tbody>{tableRows}</tbody>
+				</Table>
+			)}
 			{tableRows.length === 0 && (
-				<div style={{ width: '100%', textAlign: 'center', backgroundColor: 'lightGrey' }}>
-					Keine Daten gefunden
-				</div>
+				<div style={{ width: '100%', textAlign: 'center', color: 'lightGrey' }}>Keine Daten gefunden</div>
 			)}
 			<Row>
 				<Col xs="12" lg="6">
