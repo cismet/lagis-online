@@ -21,7 +21,7 @@ const MipaDetail = ({ mipa: data }) => {
 		<div>
 			<Row>
 				<Col lg="3" xs="3">
-					<Card>
+					<Card style={{ height: '90%' }}>
 						<CardHeader>
 							<i className="fa fa-align-justify" />Merkmale
 						</CardHeader>
@@ -97,13 +97,13 @@ const MipaDetail = ({ mipa: data }) => {
 				</Col>
 				{/*Querverweise werden über eine Suche gefunden und sind nicht im Flurstueck enthalten-*/}
 				<Col lg="4" xs="4">
-					<Card>
+					<Card style={{ height: '90%' }}>
 						<CardHeader>
 							<i className="fa fa-align-justify" />Querverweise
 						</CardHeader>
 						<CardBody>
 							<FormGroup row>
-								<div style={{ height: '105px', marginLeft: '40px' }}>
+								<div style={{ marginLeft: '40px' }}>
 									<div>Langerfeld 450 46/0</div>
 									<div>Langerfeld 449 118/0</div>
 									<div>Langerfeld 449 126/0</div>
@@ -113,7 +113,7 @@ const MipaDetail = ({ mipa: data }) => {
 					</Card>
 				</Col>
 				<Col lg="5" xs="5">
-					<Card>
+					<Card style={{ height: '90%' }}>
 						<CardHeader>
 							<i className="fa fa-align-justify" />Bemerkung
 						</CardHeader>
@@ -121,7 +121,7 @@ const MipaDetail = ({ mipa: data }) => {
 							<FormGroup row>
 								<Input
 									type="textarea"
-									style={{ height: '105px', marginLeft: '15px', marginRight: '15px' }}
+									style={{ height: '120px', marginLeft: '15px', marginRight: '15px' }}
 									name="textarea-input"
 									id="textarea-input"
 									value={data === null ? ' ' : data.bemerkung}
