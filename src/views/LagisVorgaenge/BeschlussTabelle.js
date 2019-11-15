@@ -1,5 +1,5 @@
 import React from 'react';
-import 'react-table/react-table.css';
+// import 'react-table/react-table.css';
 import CustomTable from '../Commons/CustomTable';
 import formattedDateString from '../Commons/DateHelper.js';
 
@@ -18,7 +18,9 @@ const extractBeschluesse = (vertrag) => {
 					kostenObject.beschlussart = beschluesse[index].fk_beschlussart.bezeichnung;
 
 					if (beschluesse[index].datum != null) {
-						kostenObject.datum = formattedDateString(new Date(beschluesse[index].fk_beschlussart.datum));
+						kostenObject.datum = formattedDateString(
+							new Date(beschluesse[index].fk_beschlussart.datum)
+						);
 					}
 				}
 

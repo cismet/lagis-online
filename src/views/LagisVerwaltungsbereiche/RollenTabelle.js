@@ -1,5 +1,5 @@
 import React from 'react';
-import 'react-table/react-table.css';
+// import 'react-table/react-table.css';
 import CustomTable from '../Commons/CustomTable';
 
 const extractRollen = (flurstueck) => {
@@ -31,7 +31,14 @@ const RollenTabelle = ({ flurstueck: flData, style: customStyle }) => {
 	];
 
 	const data = extractRollen(flData);
-	return <CustomTable style={customStyle} cardTitle="zusätzliche&nbsp;Rollen" data={data} columns={columnsRollen} />;
+	return (
+		<CustomTable
+			style={customStyle}
+			cardTitle='zusätzliche&nbsp;Rollen'
+			data={data}
+			columns={columnsRollen}
+		/>
+	);
 };
 
 export default RollenTabelle;

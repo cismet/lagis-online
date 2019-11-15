@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'react-table/react-table.css';
+// import 'react-table/react-table.css';
 import CustomTable from '../Commons/CustomTable';
 import formattedDateString from '../Commons/DateHelper.js';
 
@@ -89,7 +89,7 @@ const MipaTabelle = ({ flurstueck: flData, selectionListener: listener }) => {
 
 	return (
 		<CustomTable
-			cardTitle="Vermietung/Verpachtung"
+			cardTitle='Vermietung/Verpachtung'
 			data={extractMipas(flData)}
 			columns={columnsMipa}
 			rowSelectionListener={selectionListener}

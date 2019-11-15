@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import 'react-table/react-table.css';
+// import 'react-table/react-table.css';
 import CustomTable from '../Commons/CustomTable';
 
 const extractVertraege = (flurstueck) => {
@@ -65,7 +65,7 @@ const VertraegeTabelle = ({ flurstueck: flData, selectionListener: listener }) =
 
 	return (
 		<CustomTable
-			cardTitle="Verträge"
+			cardTitle='Verträge'
 			data={extractVertraege(flData)}
 			columns={columnsMipa}
 			rowSelectionListener={selectionListener}

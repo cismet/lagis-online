@@ -1,5 +1,5 @@
 import React from 'react';
-import 'react-table/react-table.css';
+// import 'react-table/react-table.css';
 import CustomTable from '../Commons/CustomTable';
 
 const extractStrassenfront = (flurstueck) => {
@@ -33,7 +33,7 @@ const StrassenfrontTabelle = ({ flurstueck: flData, style: customStyle }) => {
 	return (
 		<CustomTable
 			style={customStyle}
-			cardTitle="Straßenfronten"
+			cardTitle='Straßenfronten'
 			data={extractStrassenfront(flData)}
 			columns={columnsStrasse}
 		/>

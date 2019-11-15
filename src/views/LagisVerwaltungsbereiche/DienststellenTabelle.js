@@ -1,5 +1,5 @@
 import React from 'react';
-import 'react-table/react-table.css';
+// import 'react-table/react-table.css';
 import CustomTable from '../Commons/CustomTable';
 import { Button } from 'reactstrap';
 
@@ -8,13 +8,21 @@ const extractDienststelle = (flurstueck) => {
 	var verwaltungsbereiche_eintraege = flurstueck.n_verwaltungsbereiche_eintraege;
 
 	if (verwaltungsbereiche_eintraege != null) {
-		for (var eintragIndex = 0; eintragIndex < verwaltungsbereiche_eintraege.length; ++eintragIndex) {
-			var verwaltungsbereiche = flurstueck.n_verwaltungsbereiche_eintraege[eintragIndex].n_verwaltungsbereiche;
+		for (
+			var eintragIndex = 0;
+			eintragIndex < verwaltungsbereiche_eintraege.length;
+			++eintragIndex
+		) {
+			var verwaltungsbereiche =
+				flurstueck.n_verwaltungsbereiche_eintraege[eintragIndex].n_verwaltungsbereiche;
 			if (verwaltungsbereiche != null) {
 				for (var index = 0; index < verwaltungsbereiche.length; ++index) {
 					var stelle = {};
 					var dienststelle = verwaltungsbereiche[index].fk_verwaltende_dienststelle;
-					stelle.dienststelle = dienststelle.fk_ressort.abkuerzung + '.' + dienststelle.abkuerzung_abteilung;
+					stelle.dienststelle =
+						dienststelle.fk_ressort.abkuerzung +
+						'.' +
+						dienststelle.abkuerzung_abteilung;
 					stelle.flaeche = verwaltungsbereiche[index].flaeche;
 					dienststellen.push(stelle);
 				}
@@ -79,10 +87,10 @@ const DienststellenTabelle = ({ flurstueck: flData, style: customStyle }) => {
 	// }]
 	const buttons = [
 		<Button>
-			<i className="fa fa-history fa-lg" />
+			<i className='fa fa-history fa-lg' />
 		</Button>,
 		<Button>
-			<i className="fa fa-undo fa-lg" />
+			<i className='fa fa-undo fa-lg' />
 		</Button>
 	];
 
@@ -90,7 +98,7 @@ const DienststellenTabelle = ({ flurstueck: flData, style: customStyle }) => {
 		<div style={customStyle}>
 			<CustomTable
 				style={customStyle}
-				cardTitle="Dienststellen"
+				cardTitle='Dienststellen'
 				data={extractDienststelle(flData)}
 				columns={columnsDienststellen}
 				additionalButtons={buttons}
