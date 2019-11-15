@@ -1,4 +1,5 @@
 import React from 'react';
+import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import FilePanel from '../Commons/FilePanel.js';
 import jsonData from './../../assets/json/fs_17778.json';
 
@@ -25,7 +26,22 @@ const extractDmsData = (flurstueck) => {
 };
 
 const DMS = () => {
-	return <FilePanel dmsUrls={extractDmsData(jsonData)} />;
+	return (
+		<div className="animated fadeIn">
+			<Row>
+				<Col>
+					<Card>
+						<CardHeader>
+							<i className="fa fa-align-justify" /> DMS
+						</CardHeader>
+						<CardBody>
+							<FilePanel dmsUrls={extractDmsData(jsonData)} />
+						</CardBody>
+					</Card>
+				</Col>
+			</Row>
+		</div>
+	);
 };
 
 export default DMS;
