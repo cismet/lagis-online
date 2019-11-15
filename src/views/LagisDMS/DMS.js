@@ -16,7 +16,7 @@ const extractDmsData = (flurstueck) => {
 			}
 
 			object.name = dmsUrls[index].name;
-
+			object.object_name = dmsUrls[index].object_name;
 			dms.push(object);
 		}
 	}
