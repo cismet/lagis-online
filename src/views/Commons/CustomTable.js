@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'react-table/react-table.css';
 import { Pagination, PaginationItem, PaginationLink, Table } from 'reactstrap';
 import { Col, Row, Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardHeader } from 'reactstrap';
 
