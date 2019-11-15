@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import 'react-table/react-table.css';
 import CustomTable from '../Commons/CustomTable';
 import formattedDateString from '../Commons/DateHelper.js';
 

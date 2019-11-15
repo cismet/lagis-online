@@ -1,5 +1,4 @@
 import React from 'react';
-import 'react-table/react-table.css';
 import CustomTable from '../Commons/CustomTable';
 
 const extractStrassenfront = (flurstueck) => {
