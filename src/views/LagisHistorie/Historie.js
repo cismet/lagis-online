@@ -8,6 +8,9 @@ const History = () => {
 	var flurstueck = jsonData;
 	const { adjustSize, setAdjustSize } = useState(false);
 	const { holdHistory, setHoldHistory } = useState(false);
+	const historyClickListener = (flurstueck) => {
+		console.log(flurstueck);
+	};
 
 	return (
 		<div className="animated fadeIn">
@@ -15,10 +18,10 @@ const History = () => {
 				<Col>
 					<Card>
 						<CardHeader>
-							<i className="fa fa-align-justify" /> History
+							<i className="fa fa-align-justify" /> Historie
 						</CardHeader>
 						<CardBody>
-							<GraphPanel graphCode={flurstueck.historyDot} />
+							<GraphPanel graphCode={flurstueck.historyDot} clickListener={historyClickListener} />
 						</CardBody>
 					</Card>
 				</Col>
