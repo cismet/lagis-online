@@ -191,9 +191,7 @@ const VertragDetails = ({ vertrag: data }) => {
 							<i className="fa fa-align-justify" />Bemerkung
 						</CardHeader>
 						<CardBody>
-							<FormGroup row>
-								<Input type="textarea" name="text" id="bemerkungTa" value={extractField(data, 'bemerkung')}/>
-							</FormGroup>
+							<Input type="textarea" name="text" id="bemerkungTa" value={extractField(data, 'bemerkung')}/>
 						</CardBody>
 					</Card>
 				</Col>

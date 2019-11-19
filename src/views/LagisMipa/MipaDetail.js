@@ -118,15 +118,13 @@ const MipaDetail = ({ mipa: data }) => {
 							<i className="fa fa-align-justify" />Bemerkung
 						</CardHeader>
 						<CardBody>
-							<FormGroup row>
-								<Input
-									type="textarea"
-									style={{ height: '120px', marginLeft: '15px', marginRight: '15px' }}
-									name="textarea-input"
-									id="textarea-input"
-									value={data === null ? ' ' : data.bemerkung}
-								/>
-							</FormGroup>
+							<Input
+								type="textarea"
+								style={{ height: '120px' }}
+								name="textarea-input"
+								id="textarea-input"
+								value={data === null ? ' ' : data.bemerkung}
+							/>
 						</CardBody>
 					</Card>
 				</Col>
