@@ -16,7 +16,7 @@ const Verwaltungsbereiche = () => {
 			<Row>
 				<Col>
 					<Row>
-						<Col lg="8" style={{ height: GetMapSize() + 88 + 'px' }}>
+						<Col lg="8" style={{ height: GetMapSize() - 542 + 'px' }}>
 							<DienststellenTabelle style={{ height: '100%' }} flurstueck={jsonData} />
 						</Col>
 						<Col lg="4" style={{ height: '100%' }}>

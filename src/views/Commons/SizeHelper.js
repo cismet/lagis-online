@@ -5,7 +5,7 @@ import Color from 'color';
 import useWindowSize from '@rehooks/window-size';
 
 const GetMapSize = () => {
-	let windowSize = useWindowSize().innerHeight - 630;
+	let windowSize = useWindowSize().innerHeight;
 
 	return windowSize;
 };

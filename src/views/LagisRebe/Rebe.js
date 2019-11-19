@@ -3,6 +3,7 @@ import RebeTabelle from './RebeTabelle.js';
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import LagisMap from '../Commons/LagisMap';
 import jsonData from './../../assets/json/fs_22726.json';
+import GetMapSize from '../Commons/SizeHelper.js';
 
 const extractRebeById = (flurstueck, id) => {
 	var rebe = flurstueck.rebes;
@@ -38,7 +39,7 @@ const Rebe = () => {
 							<i className="fa fa-align-justify" /> Karte
 						</CardHeader>
 						<CardBody>
-							<LagisMap />
+							<LagisMap size={GetMapSize() - 760} />
 						</CardBody>
 					</Card>
 				</Col>

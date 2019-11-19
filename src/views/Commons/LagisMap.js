@@ -4,9 +4,7 @@ import { getLayersByName, MappingConstants, FeatureCollectionDisplay } from 'rea
 import Color from 'color';
 import useWindowSize from '@rehooks/window-size';
 
-
-
-const LagisMap = () => {
+const LagisMap = ({ size: predefinedHeight }) => {
 	const mockFC = [
 		{
 			id: 1,
@@ -124,65 +122,69 @@ const LagisMap = () => {
 				kurzname: 'Elberfeld 335 48/0'
 			}
 		}
-    ];
-    let windowSize = useWindowSize();
+	];
+	let windowSize = useWindowSize();
 	const zoom = 13.5;
 	const layers = 'wupp-plan-live@90';
-    const namedMapStyle = 'default';
-    
-    return (<div>
-            <Map
-                crs={MappingConstants.crs25832}
-                style={{
-                    height: windowSize.innerHeight - 630
-                }}
-                center={{
-                    lat: 51.252933,
-                    lng: 7.141941
-                }}
-                zoomControl={true}
-                attributionControl={false}
-                dragging={true}
-                keyboard={false}
-                zoom={zoom}
-                minZoom={5}
-                maxZoom={16}
-                zoomSnap={0.5}
-                zoomDelta={0.5}
-            >
-                {getLayersByName(layers, namedMapStyle)}
-                <FeatureCollectionDisplay
-                    // key={
-                    // 	'FeatureCollectionDisplayPreview.' +
-                    // 	currentMarkerSize +
-                    // 	'clustered:' +
-                    // 	clusteredMarkers +
-                    // 	'.customPostfix:' +
-                    // 	featureCollectionKeyPostfix
-                    // }
-                    featureCollection={mockFC}
-                    showMarkerCollection={false}
-                    style={(feature) => {
-                        const radius = 1; //not used
-                        const fillColor = new Color('green');
-                        const color = fillColor.darken(0.5);
-                        const svg = undefined;
-                        const svgSize = undefined;
-                        const style = {
-                            radius,
-                            fillColor,
-                            color,
-                            opacity: 1,
-                            fillOpacity: 0.8,
-                            svg,
-                            svgSize
-                        };
-                        return style;
-                    }}
-                />
-            </Map>
-        </div>
-    )
-}
+	const namedMapStyle = 'default';
+
+	return (
+		<div>
+			<Map
+				crs={MappingConstants.crs25832}
+				style={{
+					height:
+						predefinedHeight != null && predefinedHeight > 150
+							? predefinedHeight
+							: windowSize.innerHeight - 630
+				}}
+				center={{
+					lat: 51.252933,
+					lng: 7.141941
+				}}
+				zoomControl={true}
+				attributionControl={false}
+				dragging={true}
+				keyboard={false}
+				zoom={zoom}
+				minZoom={5}
+				maxZoom={16}
+				zoomSnap={0.5}
+				zoomDelta={0.5}
+			>
+				{getLayersByName(layers, namedMapStyle)}
+				<FeatureCollectionDisplay
+					// key={
+					// 	'FeatureCollectionDisplayPreview.' +
+					// 	currentMarkerSize +
+					// 	'clustered:' +
+					// 	clusteredMarkers +
+					// 	'.customPostfix:' +
+					// 	featureCollectionKeyPostfix
+					// }
+					featureCollection={mockFC}
+					showMarkerCollection={false}
+					style={(feature) => {
+						const radius = 1; //not used
+						const fillColor = new Color('green');
+						const color = fillColor.darken(0.5);
+						const svg = undefined;
+						const svgSize = undefined;
+						const style = {
+							radius,
+							fillColor,
+							color,
+							opacity: 1,
+							fillOpacity: 0.8,
+							svg,
+							svgSize
+						};
+						return style;
+					}}
+				/>
+			</Map>
+		</div>
+	);
+};
 
 export default LagisMap;

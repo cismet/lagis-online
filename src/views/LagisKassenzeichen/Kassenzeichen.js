@@ -3,6 +3,7 @@ import KassenzeichenTabelle from './KassenzeichenTabelle.js';
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import LagisMap from '../Commons/LagisMap';
 import jsonData from './../../assets/json/fs_17778.json';
+import GetMapSize from '../Commons/SizeHelper.js';
 
 const Kassenzeichen = () => {
 	return (
@@ -14,7 +15,7 @@ const Kassenzeichen = () => {
 							<i className="fa fa-align-justify" /> Karte
 						</CardHeader>
 						<CardBody>
-							<LagisMap />
+							<LagisMap size={GetMapSize() - 555} />
 						</CardBody>
 					</Card>
 				</Col>
