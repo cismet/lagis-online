@@ -15,7 +15,7 @@ const History = () => {
 				<Col>
 					<Card>
 						<CardHeader>
-							<i className="fa fa-align-justify" /> DMS
+							<i className="fa fa-align-justify" /> History
 						</CardHeader>
 						<CardBody>
 							<GraphPanel graphCode={flurstueck.historyDot} />
@@ -50,7 +50,7 @@ const History = () => {
 									id="ckGestaltung"
 									name="checkbox3"
 									value="gestaltung"
-									checked={adjustSize}
+									checked={holdHistory}
 								/>
 								<span style={{ verticalAlign: 'middle', paddingTop: '5px' }}>Historie halten</span>
 							</FormGroup>
