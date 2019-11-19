@@ -7,8 +7,8 @@ const createUrls = (urls) => {
 		for (var index = 0; index < urls.length; ++index) {
 			symbols.push(
 				<div style={{ textAlign: 'center', marginRight: '10px' }}>
-					<i className="fa fa-file-pdf-o fa-lg" />
-					<div>{urls[index].name}</div>
+					<i style={{ fontSize: '36px' }} className="fa fa-file-pdf-o fa-lg" />
+					<div style={{ marginTop: '5px' }}>{urls[index].name}</div>
 				</div>
 			);
 		}
