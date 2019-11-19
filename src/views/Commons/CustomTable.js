@@ -109,9 +109,20 @@ const CustomTable = ({
 	}
 
 	const tableRows = createRows(cols, d, page * rowsPerPage, rowsPerPage, listener, selectedIndex);
+	var additionalStyle = {};
+
+	if (tableRows.length === 0) {
+		//center the child div vertically
+		additionalStyle = { display: 'flex', flexDirection: 'column', justifyContent: 'center' };
+	}
+
+	const styleOptions = {
+		...customStyle,
+		...additionalStyle
+	};
 
 	const table = (
-		<div style={customStyle}>
+		<div style={styleOptions}>
 			{tableRows.length > 0 && (
 				<Table responsive striped hover>
 					<thead>
@@ -121,7 +132,7 @@ const CustomTable = ({
 				</Table>
 			)}
 			{tableRows.length === 0 && (
-				<div style={{ width: '100%', textAlign: 'center', color: 'lightGrey' }}>Keine Daten gefunden</div>
+				<div style={{ width: '100%', textAlign: 'center', color: '#888888' }}>Keine Daten vorhanden</div>
 			)}
 			<Row>
 				<Col xs="12" lg="6">
