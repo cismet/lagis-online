@@ -35,7 +35,9 @@
 		"simple-line-icons": "^2.4.1",
 		"react-bootstrap-table": "^4.3.1",
 		"react-table": "^6.10.3",
-		"graphviz-react": "^1.0.4"
+		"graphviz-react": "^1.0.4",
+		"react-graph-vis": "^1.0.5",
+		"d3": "latest"
 	},
 	"resolutions": {
 		"babel-jest": "24.7.1"
@@ -56,16 +58,8 @@
 		"extends": "react-app"
 	},
 	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
+		"production": [ ">0.2%", "not dead", "not op_mini all" ],
+		"development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
 	},
 	"devDependencies": {
 		"@storybook/addon-actions": "^5.2.5",
