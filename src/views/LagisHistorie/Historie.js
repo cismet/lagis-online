@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Card, CardBody, CardHeader, Col, Row, FormGroup, Input, Label } from 'reactstrap';
+import GraphTool from '../Commons/Graph.js';
 import GraphPanel from '../Commons/GraphPanel';
 import jsonData from './../../assets/json/fs_17778.json';
 import formattedDateString from '../Commons/DateHelper.js';
+import GetMapSize from '../Commons/SizeHelper.js';
+import useWindowSize from '@rehooks/window-size';
 
 const History = () => {
 	var flurstueck = jsonData;
@@ -11,6 +14,10 @@ const History = () => {
 	const historyClickListener = (flurstueck) => {
 		console.log(flurstueck);
 	};
+
+	var height = useWindowSize().innerHeight;
+	var width = useWindowSize().innerWidth;
+	var options = { height: height, width: width };
 
 	return (
 		<div className="animated fadeIn">
@@ -21,7 +28,12 @@ const History = () => {
 							<i className="fa fa-align-justify" /> Historie
 						</CardHeader>
 						<CardBody>
-							<GraphPanel graphCode={flurstueck.historyDot} clickListener={historyClickListener} />
+							<GraphTool
+								options={options}
+								style={{ height: GetMapSize() - 510 + 'px' }}
+								graphCode={flurstueck.historyDot}
+								clickListener={historyClickListener}
+							/>
 						</CardBody>
 					</Card>
 				</Col>

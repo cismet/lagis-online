@@ -27,7 +27,7 @@ const GraphPanel = ({ graphCode: code, options: o, style: customStyle, clickList
 	});
 
 	return (
-		<div id="graphvizDiv">
+		<div style={customStyle} id="graphvizDiv">
 			<Graphviz style={customStyle} dot={code} options={o} />
 		</div>
 	);
