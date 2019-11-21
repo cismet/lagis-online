@@ -8,7 +8,7 @@ import * as d3Graphviz from 'd3-graphviz';
 // need to import the vis network css in order to show tooltip
 //import './network.css';
 
-const GraphTool = ({ graphCode: code, options: o, style: customStyle, clickListener: listener }) => {
+const GraphTool = ({ graphCode: code, options: o, style: customStyle, clickListener: listener, splines }) => {
 	//this listener will reset the graph zoom and pan
 	var listener1 = (t) => {
 		var option = o != null ? o : { height: 500, width: 1550 };
@@ -20,7 +20,12 @@ const GraphTool = ({ graphCode: code, options: o, style: customStyle, clickListe
 		var option = o != null ? o : { height: 500, width: 1550 };
 		var scale = 1.0;
 		//        d3.select('.graph').graphviz().options(option);
-		var adjustedCode = code.replace('digraph G{', 'digraph G{node [shape="polygon" style="filled"]');
+		var adjustedCode = code.replace(
+			'digraph G{',
+			'digraph G{ ' +
+				(splines != null ? 'splines="' + splines + '"' : '') +
+				' concentrate="true" node [shape="polygon" style="filled"] edge [tailport="c" headport="c" arrowtail="dot" concentrate="true"]'
+		);
 		var graph = d3.select('.graph').graphviz(option).renderDot(adjustedCode);
 
 		var div = document.getElementById('graphvizDiv');
