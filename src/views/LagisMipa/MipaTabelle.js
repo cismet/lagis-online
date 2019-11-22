@@ -68,11 +68,17 @@ const MipaTabelle = ({ flurstueck: flData, selectionListener: listener }) => {
 	];
 	var mipas = extractMipas(flData);
 	const [ selectedRow, setSelectedRow ] = useState(mipas != null && mipas.length > 0 ? 0 : -1);
+	const [ selectedFlurstueck, setSelectedFlurstueck ] = useState(flData);
+
+	if (flData.id != selectedFlurstueck.id) {
+		setSelectedFlurstueck(flData);
+		setSelectedRow(mipas != null && mipas.length > 0 ? 0 : -1);
+	}
 
 	const selectionListener = (index) => {
 		var newIndex = index;
 
-		if (index === selectedRow) {
+		if (index === selectedRow || newIndex >= extractMipas(flData).length) {
 			newIndex = -1;
 		}
 
@@ -87,7 +93,7 @@ const MipaTabelle = ({ flurstueck: flData, selectionListener: listener }) => {
 		}
 	};
 
-	if (selectedRow !== -1) {
+	if (selectedRow !== -1 && selectedRow < extractMipas(flData).length) {
 		listener(extractMipas(flData)[selectedRow].id);
 	} else {
 		listener(null);

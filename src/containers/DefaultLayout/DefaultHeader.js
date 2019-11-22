@@ -9,7 +9,7 @@ import sygnet from '../../assets/img/brand/sygnet.svg';
 import Select from 'react-select';
 import json from './../../assets/json/fs_17778.json';
 import FlurstueckContext from './../../model/FlurstueckContext.js';
-import { getGemarkungen, getFlure, getFlurstueckzaehler } from './../../model/DataModel.js';
+import { getGemarkungen, getFlure, getFlurstueckzaehler, getFlurstueckById } from './../../model/DataModel.js';
 
 const propTypes = {
 	children: PropTypes.node
@@ -18,10 +18,9 @@ const propTypes = {
 const defaultProps = {};
 
 class DefaultHeader extends Component {
-	render() {
-		// eslint-disable-next-line
-		const { children, ...attributes } = this.props;
+	setInitialState() {
 		var flurstueck = this.context.flurstueck;
+
 		var gem = getGemarkungen();
 		const gemarkungen = [];
 
@@ -40,6 +39,7 @@ class DefaultHeader extends Component {
 			flurstueck.fk_flurstueck_schluessel.fk_gemarkung.schluessel,
 			flurstueck.fk_flurstueck_schluessel.flur
 		);
+
 		const fstck = [];
 
 		for (let index = 0; index < zaehler.length; ++index) {
@@ -49,22 +49,85 @@ class DefaultHeader extends Component {
 			});
 		}
 
-		const gemarkungChange = (e) => {
-			var gem = document.getElementById('gemarkungen-combo').value;
-			flu = getFlure(gem);
+		this.state = {
+			gemarkung: {
+				value: flurstueck.fk_flurstueck_schluessel.fk_gemarkung.schluessel,
+				label: flurstueck.fk_flurstueck_schluessel.fk_gemarkung.bezeichnung
+			},
+			gemarkungen: gemarkungen,
+			flure: flure,
+			fstck: fstck,
+			flur: {
+				value: flurstueck.fk_flurstueck_schluessel.flur,
+				label: flurstueck.fk_flurstueck_schluessel.flur
+			},
+			flurst: {
+				value: flurstueck.id,
+				label: flurstueck.fk_flurstueck_schluessel.flurstueck_zaehler
+			}
+		};
+	}
+
+	render() {
+		// eslint-disable-next-line
+		const { children, ...attributes } = this.props;
+		var flurstueck = this.context.flurstueck;
+
+		if (this.state === null || this.state === undefined) {
+			this.setInitialState();
+		}
+
+		const fstckChanged = (event) => {
+			this.context.changeFlurstueck(getFlurstueckById(event.value));
+		};
+
+		const flurChange = (event, gemarkung) => {
+			var zaehler = getFlurstueckzaehler(
+				gemarkung != null && gemarkung.value != null ? gemarkung.value : this.state.gemarkung.value,
+				event.value
+			);
+
+			const fstck = [];
+
+			for (let index = 0; index < zaehler.length; ++index) {
+				fstck.push({
+					value: zaehler[index].id,
+					label: zaehler[index].zaehler
+				});
+			}
+
+			this.setState({
+				flur: {
+					value: event.value,
+					label: event.label
+				},
+				fstck: fstck,
+				flurst: fstck[0]
+			});
+
+			fstckChanged(fstck[0]);
+		};
+
+		const gemarkungChange = (event) => {
+			var flu = getFlure(event.value);
+			const flure = [];
 
 			for (let index = 0; index < flu.length; ++index) {
 				flure.push({ value: flu[index], label: flu[index] });
 			}
+
+			this.setState({
+				gemarkung: {
+					value: event.value,
+					label: event.label
+				},
+				flur: flure[0],
+				flure: flure
+			});
+
+			flurChange(flure[0], { value: event.value });
 		};
 
-		const gemarkungClicked = (e) => {
-			flu = getFlure(flurstueck.fk_flurstueck_schluessel.fk_gemarkung.schluessel);
-
-			for (let index = 0; index < flu.length; ++index) {
-				flure.push({ value: flu[index], label: flu[index] });
-			}
-		};
 		// const gemarkungen = [
 		// 	{ value: '3001', label: 'Barmen' },
 		// 	{ value: '3485', label: 'Beyenburg' },
@@ -584,48 +647,34 @@ class DefaultHeader extends Component {
 						<div style={{ width: '200px' }}>
 							<Select
 								id="gemarkungen-combo"
-								options={gemarkungen}
+								options={this.state.gemarkungen}
 								isSearchable={true}
 								placeholder="Gemarkung"
-								value={{
-									value: flurstueck.fk_flurstueck_schluessel.fk_gemarkung.schluessel,
-									label: flurstueck.fk_flurstueck_schluessel.fk_gemarkung.bezeichnung
-								}}
-								onChange={() => {
-									gemarkungChange();
-								}}
+								value={this.state.gemarkung}
+								onChange={gemarkungChange}
 							/>
 						</div>
 					</NavItem>
 					<NavItem style={{ paddingRight: '10px' }}>
 						<div style={{ width: '100px' }}>
 							<Select
-								options={flure}
+								id="flur-combo"
+								options={this.state.flure}
 								isSearchable={true}
 								placeholder="Flur"
-								value={{
-									value: flurstueck.fk_flurstueck_schluessel.flur,
-									label: flurstueck.fk_flurstueck_schluessel.flur
-								}}
+								value={this.state.flur}
+								onChange={flurChange}
 							/>
 						</div>
 					</NavItem>
 					<NavItem style={{ paddingRight: '20px' }}>
 						<div style={{ width: '120px' }}>
 							<Select
-								options={fstck}
+								options={this.state.fstck}
 								isSearchable={true}
 								placeholder="Flurstück"
-								value={{
-									value:
-										flurstueck.fk_flurstueck_schluessel.fk_gemarkung.id +
-										flurstueck.fk_flurstueck_schluessel.fk_gemarkung.schluessel +
-										'-' +
-										flurstueck.fk_flurstueck_schluessel.flur +
-										'-' +
-										flurstueck.fk_flurstueck_schluessel.flurstueck_zaehler,
-									label: flurstueck.fk_flurstueck_schluessel.flurstueck_zaehler
-								}}
+								value={this.state.flurst}
+								onChange={fstckChanged}
 							/>
 						</div>
 					</NavItem>

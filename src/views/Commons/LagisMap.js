@@ -136,7 +136,7 @@ const LagisMap = ({ size: predefinedHeight }) => {
 					height:
 						predefinedHeight != null && predefinedHeight > 150
 							? predefinedHeight
-							: windowSize.innerHeight - 630
+							: windowSize.innerHeight - 595
 				}}
 				center={{
 					lat: 51.252933,

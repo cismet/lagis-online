@@ -59,4 +59,14 @@ const getFlurstueckzaehler = (gemarkung, flur) => {
 	return zaehler;
 };
 
-export { getGemarkungen, getFlure, getFlurstueckzaehler };
+const getFlurstueckById = (id) => {
+	for (var index = 0; index < flurstuecke.length; ++index) {
+		if (flurstuecke[index].id === id) {
+			return flurstuecke[index];
+		}
+	}
+
+	return {};
+};
+
+export { getGemarkungen, getFlure, getFlurstueckzaehler, getFlurstueckById };

@@ -44,18 +44,24 @@ const VertraegeTabelle = ({ flurstueck: flData, selectionListener: listener }) =
 	];
 	var vertraege = extractVertraege(flData);
 	const [ selectedRow, setSelectedRow ] = useState(vertraege != null && vertraege.length > 0 ? 0 : -1);
+	const [ selectedFlurstueck, setSelectedFlurstueck ] = useState(flData);
+
+	if (flData.id != selectedFlurstueck.id) {
+		setSelectedFlurstueck(flData);
+		setSelectedRow(vertraege != null && vertraege.length > 0 ? 0 : -1);
+	}
 
 	const selectionListener = (index) => {
 		var newIndex = index;
 
-		if (index === selectedRow) {
+		if (index === selectedRow || newIndex >= extractVertraege(flData).length) {
 			newIndex = -1;
 		}
 
 		setSelectedRow(newIndex);
 
 		if (listener != null) {
-			if (newIndex !== -1) {
+			if (newIndex !== -1 && newIndex < extractVertraege(flData).length) {
 				listener(extractVertraege(flData)[newIndex].id);
 			} else {
 				listener(null);
@@ -63,7 +69,7 @@ const VertraegeTabelle = ({ flurstueck: flData, selectionListener: listener }) =
 		}
 	};
 
-	if (selectedRow !== -1) {
+	if (selectedRow !== -1 && selectedRow < extractVertraege(flData).length) {
 		listener(extractVertraege(flData)[selectedRow].id);
 	} else {
 		listener(null);

@@ -65,6 +65,12 @@ const RebeTabelle = ({ flurstueck: data, selectionListener: listener }) => {
 
 	var rebes = extractRebe(data);
 	const [ selectedRow, setSelectedRow ] = useState(rebes != null && rebes.length > 0 ? 0 : -1);
+	const [ selectedFlurstueck, setSelectedFlurstueck ] = useState(data);
+
+	if (data.id != selectedFlurstueck.id) {
+		setSelectedFlurstueck(data);
+		setSelectedRow(rebes != null && rebes.length > 0 ? 0 : -1);
+	}
 
 	const selectionListener = (index) => {
 		var newIndex = index;
