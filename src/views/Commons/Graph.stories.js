@@ -29,7 +29,7 @@ storiesOf('GraphTool', module)
 			graphCode={
 				'digraph G{\n"Elberfeld 224 158/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 105/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 125/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 175/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 177/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 178/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 259/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 262/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 263/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 66/2"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 70/10"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 72/10"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 81/15"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 132/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 160/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 164/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 172/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 20/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 75/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 94/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"pseudo Schluessel18883"->"Elberfeld 240 190/0" [lineInterpolate="linear"];\n"Elberfeld 240 190/0"  [style="fill: #eee; font-weight: bold"];\n"pseudo Schluessel18883" [label="    "]}'
 			}
-			splines="ortho"
+			splines='ortho'
 		/>
 	))
 	.add('GraphPanel deep polyline', () => (
@@ -37,7 +37,7 @@ storiesOf('GraphTool', module)
 			graphCode={
 				'digraph G{\n"Elberfeld 224 158/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 105/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 125/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 175/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 177/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 178/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 259/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 262/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 263/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 66/2"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 70/10"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 72/10"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 238 81/15"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 132/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 160/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 164/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 172/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 20/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 75/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"Elberfeld 240 94/0"->"pseudo Schluessel18883" [lineInterpolate="linear"];\n"pseudo Schluessel18883"->"Elberfeld 240 190/0" [lineInterpolate="linear"];\n"Elberfeld 240 190/0"  [style="fill: #eee; font-weight: bold"];\n"pseudo Schluessel18883" [label="    "]}'
 			}
-			splines="polyline"
+			splines='polyline'
 		/>
 	))
 	.add('GraphPanel deepest', () => (
@@ -52,7 +52,7 @@ storiesOf('GraphTool', module)
 			graphCode={
 				'digraph G{\n"Elberfeld 30 144/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 152/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 19/11"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 19/12"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 212/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 255/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 261/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 68/15"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 265/0"  [style="fill: #eee; font-weight: bold"];\n}'
 			}
-			splines="ortho"
+			splines='ortho'
 		/>
 	))
 	.add('GraphPanel 9 nodes splines=line', () => (
@@ -60,7 +60,7 @@ storiesOf('GraphTool', module)
 			graphCode={
 				'digraph G{\n"Elberfeld 30 144/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 152/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 19/11"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 19/12"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 212/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 255/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 261/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 68/15"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 265/0"  [style="fill: #eee; font-weight: bold"];\n}'
 			}
-			splines="line"
+			splines='line'
 		/>
 	))
 	.add('GraphPanel 9 nodes splines=polyline', () => (
@@ -68,7 +68,7 @@ storiesOf('GraphTool', module)
 			graphCode={
 				'digraph G{\n"Elberfeld 30 144/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 152/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 19/11"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 19/12"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 212/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 255/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 261/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 68/15"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 265/0"  [style="fill: #eee; font-weight: bold"];\n}'
 			}
-			splines="polyline"
+			splines='polyline'
 		/>
 	))
 	.add('GraphPanel 9 nodes splines=curved', () => (
@@ -76,7 +76,7 @@ storiesOf('GraphTool', module)
 			graphCode={
 				'digraph G{\n"Elberfeld 30 144/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 152/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 19/11"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 19/12"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 212/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 255/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 261/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 68/15"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 265/0"  [style="fill: #eee; font-weight: bold"];\n}'
 			}
-			splines="curved"
+			splines='curved'
 		/>
 	))
 	.add('GraphPanel 9 nodes splines=spline', () => (
@@ -84,6 +84,6 @@ storiesOf('GraphTool', module)
 			graphCode={
 				'digraph G{\n"Elberfeld 30 144/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 152/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 19/11"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 19/12"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 212/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 255/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 261/0"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 68/15"->"Elberfeld 30 265/0" [lineInterpolate="linear"];\n"Elberfeld 30 265/0"  [style="fill: #eee; font-weight: bold"];\n}'
 			}
-			splines="curved"
+			splines='curved'
 		/>
 	));
