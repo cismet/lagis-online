@@ -1,6 +1,5 @@
 import React from 'react';
 import CustomTable from '../Commons/CustomTable';
-import jsonData from './../../assets/json/fs_22726.json';
 
 const extractNKF = (flurstueck) => {
 	var nkf = [];
@@ -34,7 +33,7 @@ const extractNKF = (flurstueck) => {
 	return nkf;
 };
 
-const NKFTabelle = () => {
+const NKFTabelle = ({ flurstueck: flData }) => {
 	const columns = [
 		{
 			Header: 'Anlageklasse',
@@ -46,7 +45,7 @@ const NKFTabelle = () => {
 		}
 	];
 
-	return <CustomTable cardTitle="NKF&nbsp;Übersicht" data={extractNKF(jsonData)} columns={columns} buttons={false} />;
+	return <CustomTable cardTitle="NKF&nbsp;Übersicht" data={extractNKF(flData)} columns={columns} buttons={false} />;
 };
 
 export default NKFTabelle;

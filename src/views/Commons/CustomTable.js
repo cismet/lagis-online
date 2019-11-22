@@ -75,7 +75,7 @@ const createPagination = (page, totalRows, rowsPerPage, setPage) => {
 			</PaginationItem>
 		);
 		var nextItem = (
-			<PaginationItem disabled={page === totalRows / rowsPerPage - 1 || totalRows <= rowsPerPage}>
+			<PaginationItem disabled={page >= totalRows / rowsPerPage - 1 || totalRows <= rowsPerPage}>
 				<PaginationLink onClick={() => setPage(page + 1)} next tag="button" />
 			</PaginationItem>
 		);

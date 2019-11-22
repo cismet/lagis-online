@@ -39,7 +39,7 @@ const extractNutzung = (flurstueck) => {
 	return nutzungArray;
 };
 
-const NutzungTabelle = () => {
+const NutzungTabelle = ({ flurstueck: flData }) => {
 	const columns = [
 		{
 			Header: 'Nutzung-Nr.',
@@ -96,7 +96,7 @@ const NutzungTabelle = () => {
 	return (
 		<CustomTable
 			cardTitle="Nutzungen"
-			data={extractNutzung(jsonData)}
+			data={extractNutzung(flData)}
 			columns={columns}
 			additionalButtons={buttons}
 		/>
