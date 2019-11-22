@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import FilePanel from '../Commons/FilePanel.js';
-import jsonData from './../../assets/json/fs_17778.json';
 import GetMapSize from '../Commons/SizeHelper.js';
+import FlurstueckContext from './../../model/FlurstueckContext.js';
 
 const extractDmsData = (flurstueck) => {
 	var dms = [];
@@ -27,6 +27,8 @@ const extractDmsData = (flurstueck) => {
 };
 
 const DMS = () => {
+	const flurstueckContext = useContext(FlurstueckContext);
+
 	return (
 		<div className="animated fadeIn">
 			<Row>
@@ -36,7 +38,7 @@ const DMS = () => {
 							<i className="fa fa-align-justify" /> DMS
 						</CardHeader>
 						<CardBody>
-							<FilePanel dmsUrls={extractDmsData(jsonData)} />
+							<FilePanel dmsUrls={extractDmsData(flurstueckContext.flurstueck)} />
 						</CardBody>
 					</Card>
 				</Col>

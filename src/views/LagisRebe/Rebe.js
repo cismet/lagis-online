@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import RebeTabelle from './RebeTabelle.js';
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import LagisMap from '../Commons/LagisMap';
-import jsonData from './../../assets/json/fs_22726.json';
 import GetMapSize from '../Commons/SizeHelper.js';
+import FlurstueckContext from './../../model/FlurstueckContext.js';
 
 const extractRebeById = (flurstueck, id) => {
 	var rebe = flurstueck.rebes;
@@ -21,12 +21,13 @@ const extractRebeById = (flurstueck, id) => {
 
 const Rebe = () => {
 	const [ selectedRebe, setSelectedRebe ] = useState(null);
+	const flurstueckContext = useContext(FlurstueckContext);
 
 	const rebeListener = (id) => {
 		if (id === null) {
 			setSelectedRebe(null);
 		} else {
-			setSelectedRebe(extractRebeById(jsonData, id));
+			setSelectedRebe(extractRebeById(flurstueckContext.flurstueck, id));
 		}
 	};
 
@@ -46,7 +47,7 @@ const Rebe = () => {
 			</Row>
 			<Row>
 				<Col>
-					<RebeTabelle flurstueck={jsonData} selectionListener={rebeListener} />
+					<RebeTabelle flurstueck={flurstueckContext.flurstueck} selectionListener={rebeListener} />
 				</Col>
 			</Row>
 		</div>

@@ -1,0 +1,200 @@
+{
+  "$self" : "/LAGIS.FLURSTUECK/18880",
+  "id" : 18880,
+  "bemerkung" : null,
+  "fk_spielplatz" : null,
+  "fk_flurstueck_schluessel" : {
+    "$self" : "/LAGIS.FLURSTUECK_SCHLUESSEL/18887",
+    "id" : 18887,
+    "flur" : 240,
+    "flurstueck_zaehler" : 190,
+    "flurstueck_nenner" : 0,
+    "ist_gesperrt" : false,
+    "bemerkung_sperre" : null,
+    "datum_entstehung" : 1264402911202,
+    "gueltig_bis" : null,
+    "fk_gemarkung" : {
+      "$self" : "/LAGIS.GEMARKUNG/5",
+      "id" : 5,
+      "bezeichnung" : "Elberfeld",
+      "schluessel" : 3135
+    },
+    "datum_letzter_stadtbesitz" : 1319028729482,
+    "war_staedtisch" : true,
+    "fk_flurstueck_art" : {
+      "$self" : "/LAGIS.FLURSTUECK_ART/1",
+      "id" : 1,
+      "bezeichnung" : "städtisch"
+    },
+    "letzter_bearbeiter" : "PienischB102@Lagerbuch",
+    "letzte_bearbeitung" : 1319028729449
+  },
+  "in_stadtbesitz" : null,
+  "ar_baeume" : [ ],
+  "ar_vertraege" : [ ],
+  "n_verwaltungsbereiche_eintraege" : [ {
+    "$self" : "/LAGIS.VERWALTUNGSBEREICHE_EINTRAG/18880",
+    "id" : 18880,
+    "fk_flurstueck" : null,
+    "geaendert_am" : 1319028729449,
+    "geaendert_von" : "PienischB102@Lagerbuch",
+    "n_verwaltungsbereiche" : [ {
+      "$self" : "/LAGIS.VERWALTUNGSBEREICH/15473",
+      "id" : 15473,
+      "fk_verwaltende_dienststelle" : {
+        "$self" : "/LAGIS.VERWALTENDE_DIENSTSTELLE/49",
+        "id" : 49,
+        "abkuerzung_abteilung" : "2",
+        "bezeichnung_abteilung" : "Betrieb Grün- und Freiflächen",
+        "email_adresse" : "",
+        "fk_ressort" : {
+          "$self" : "/LAGIS.RESSORT/3",
+          "id" : 3,
+          "bezeichnung" : "Ressort Grünflächen und Forsten",
+          "abkuerzung" : "103"
+        },
+        "n_farben" : [ ]
+      },
+      "fk_verwaltungsbereiche_eintrag" : null,
+      "flaeche" : null,
+      "fk_geom" : null
+    } ]
+  } ],
+  "n_dms_urls" : [ {
+    "$self" : "/LAGIS.DMS_URL/17972",
+    "id" : 17972,
+    "typ" : 1,
+    "name" : "IV",
+    "beschreibung" : "",
+    "fk_url" : {
+      "$self" : "/LAGIS.URL/12387",
+      "id" : 12387,
+      "url_base_id" : {
+        "$self" : "/LAGIS.URL_BASE/11406",
+        "id" : 11406,
+        "prot_prefix" : "\\\\",
+        "server" : "sw0040",
+        "path" : "\\Lagerbuch\\Inhaltsverzeichnis_LB\\Elberfeld\\"
+      },
+      "object_name" : "240.TIF"
+    },
+    "fk_flurstueck" : null
+  }, {
+    "$self" : "/LAGIS.DMS_URL/22852",
+    "id" : 22852,
+    "typ" : 1,
+    "name" : "VB",
+    "beschreibung" : "",
+    "fk_url" : {
+      "$self" : "/LAGIS.URL/12556",
+      "id" : 12556,
+      "url_base_id" : {
+        "$self" : "/LAGIS.URL_BASE/11410",
+        "id" : 11410,
+        "prot_prefix" : "\\\\",
+        "server" : "sw0040",
+        "path" : "\\Lagerbuch\\Vermbl\\3135\\I\\"
+      },
+      "object_name" : "11.TIF"
+    },
+    "fk_flurstueck" : null
+  }, {
+    "$self" : "/LAGIS.DMS_URL/27810",
+    "id" : 27810,
+    "typ" : 1,
+    "name" : "NO",
+    "beschreibung" : null,
+    "fk_url" : {
+      "$self" : "/LAGIS.URL/13784",
+      "id" : 13784,
+      "url_base_id" : {
+        "$self" : "/LAGIS.URL_BASE/12483",
+        "id" : 12483,
+        "prot_prefix" : "\\\\",
+        "server" : "sw0040",
+        "path" : "\\Lagerbuch\\bearb PDF\\NO\\"
+      },
+      "object_name" : "0044-08.PDF"
+    },
+    "fk_flurstueck" : null
+  }, {
+    "$self" : "/LAGIS.DMS_URL/28191",
+    "id" : 28191,
+    "typ" : 1,
+    "name" : "FFM",
+    "beschreibung" : null,
+    "fk_url" : {
+      "$self" : "/LAGIS.URL/14165",
+      "id" : 14165,
+      "url_base_id" : {
+        "$self" : "/LAGIS.URL_BASE/12864",
+        "id" : 12864,
+        "prot_prefix" : "\\\\",
+        "server" : "sw0040",
+        "path" : "\\Lagerbuch\\bearb PDF\\FFM\\"
+      },
+      "object_name" : "20192-08.PDF"
+    },
+    "fk_flurstueck" : null
+  } ],
+  "n_nutzungen" : [ {
+    "$self" : "/LAGIS.NUTZUNG/22200",
+    "id" : 22200,
+    "fk_flurstueck" : null,
+    "n_buchungen" : [ {
+      "$self" : "/LAGIS.NUTZUNG_BUCHUNG/27804",
+      "id" : 27804,
+      "bemerkung" : null,
+      "flaeche" : 1575,
+      "gueltig_bis" : null,
+      "gueltig_von" : 1264424367533,
+      "ist_buchwert" : true,
+      "quadratmeterpreis" : 32.21,
+      "fk_anlageklasse" : {
+        "$self" : "/LAGIS.ANLAGEKLASSE/8",
+        "id" : 8,
+        "schluessel" : "k0241100",
+        "bezeichnung" : "Sonstige unbebaute Grundstücke - Grundstücke"
+      },
+      "fk_nutzung" : null,
+      "fk_nutzungsart" : {
+        "$self" : "/LAGIS.NUTZUNGSART/273",
+        "id" : 273,
+        "schluessel" : "41008-400",
+        "bezeichnung" : "Siedlung-Grünanlage"
+      }
+    } ]
+  } ],
+  "n_kassenzeichen" : [ ],
+  "n_zusatz_rollen" : [ ],
+  "n_strassenfronten" : [ ],
+  "historyDot" : "digraph G{\n\"Elberfeld 224 158/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 105/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 125/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 175/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 177/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 178/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 259/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 262/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 263/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 66/2\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 70/10\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 72/10\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 238 81/15\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 240 132/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 240 160/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 240 164/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 240 172/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 240 20/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 240 75/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"Elberfeld 240 94/0\"->\"pseudo Schluessel18883\" [lineInterpolate=\"linear\"];\n\"pseudo Schluessel18883\"->\"Elberfeld 240 190/0\" [lineInterpolate=\"linear\"];\n\"Elberfeld 240 190/0\"  [style=\"fill: #eee; font-weight: bold\"];\n\"pseudo Schluessel18883\" [label=\"    \"]}",
+  "mipas" : [ {
+    "$self" : "/LAGIS.MIPA/1924",
+    "id" : 1924,
+    "nutzer" : "WSW-AG",
+    "lage" : "Am Wolfshahn",
+    "vertragsbeginn" : -2208992400000,
+    "vertragsende" : null,
+    "flaeche" : null,
+    "bemerkung" : "Gestattung-Wasser.- u. Stromleitung",
+    "fk_geom" : {
+      "$self" : "/LAGIS.GEOM/22481",
+      "id" : 22481,
+      "geo_field" : "SRID=25832;POLYGON ((370618.384171955 5677355.68593641, 370612.294091713 5677355.05767737, 370611.796518296 5677354.92795191, 370609.310826249 5677354.7495137, 370608.064891547 5677354.62139595, 370601.930778425 5677354.21402405, 370597.670558743 5677353.97410109, 370587.822886553 5677354.29199026, 370587.268290099 5677354.30967872, 370586.760036044 5677354.35716025, 370586.252095245 5677354.40788695, 370585.744488426 5677354.46185674, 370585.237236269 5677354.51906743, 370584.73035951 5677354.5795167, 370584.223878779 5677354.64320207, 370583.717814777 5677354.71012097, 370583.212188125 5677354.78027065, 370582.707019459 5677354.85364828, 370582.202329386 5677354.93025085, 370581.698138483 5677355.01007524, 370581.194467332 5677355.09311822, 370580.691336475 5677355.17937639, 370580.188766442 5677355.26884623, 370579.686777715 5677355.36152411, 370579.185390789 5677355.45740625, 370578.684626099 5677355.55648874, 370578.184504099 5677355.65876754, 370577.685045172 5677355.76423849, 370577.186269708 5677355.87289729, 370576.892632023 5677355.93494243, 370576.470801637 5677356.02950357, 370576.04948971 5677356.12634974, 370575.628708646 5677356.22547809, 370575.208470795 5677356.32688572, 370574.788788497 5677356.43056966, 370574.36967409 5677356.53652684, 370573.951139893 5677356.64475418, 370573.533198204 5677356.75524848, 370573.115861285 5677356.86800651, 370572.699141417 5677356.98302495, 370572.283050817 5677357.10030043, 370571.867601726 5677357.21982951, 370571.452806354 5677357.34160866, 370571.038676865 5677357.46563433, 370570.625225466 5677357.59190287, 370570.212464258 5677357.72041057, 370569.800405391 5677357.85115365, 370569.389060978 5677357.98412829, 370568.978443082 5677358.11933056, 370568.568563771 5677358.25675652, 370568.533271074 5677358.27010856, 370568.497986197 5677358.28348132, 370568.462709188 5677358.29687479, 370568.427440047 5677358.31028896, 370568.392178763 5677358.32372383, 370568.356925372 5677358.33717939, 370568.32167989 5677358.35065563, 370568.286442325 5677358.36415256, 370568.251212686 5677358.37767017, 370568.215990964 5677358.39120846, 370568.180777196 5677358.40476741, 370568.145571403 5677358.41834703, 370568.110373572 5677358.43194731, 370568.075183749 5677358.44556825, 370568.040001903 5677358.45920983, 370568.004828058 5677358.47287206, 370567.969662249 5677358.48655494, 370567.934504468 5677358.50025844, 370567.899354734 5677358.51398259, 370567.864213072 5677358.52772736, 370567.474754609 5677358.66603043, 370567.086013556 5677358.80633804, 370566.698000245 5677358.94864649, 370566.310724966 5677359.09295199, 370565.924198013 5677359.23925071, 370565.538429603 5677359.38753876, 370565.153430015 5677359.53781223, 370564.769209433 5677359.69006711, 370564.385778069 5677359.84429938, 370564.003146108 5677360.00050493, 370563.621323708 5677360.15867962, 370563.240320977 5677360.31881927, 370562.860148046 5677360.4809196, 370562.480815001 5677360.64497633, 370562.102331907 5677360.8109851, 370561.724708788 5677360.97894151, 370561.347955707 5677361.1488411, 370560.972082626 5677361.32067935, 370560.597099531 5677361.49445171, 370560.223016389 5677361.67015357, 370559.82725868 5677361.85826129, 370559.432539605 5677362.04853942, 370559.038871061 5677362.24098222, 370558.646264922 5677362.43558388, 370558.254733045 5677362.63233853, 370557.864287205 5677362.83124024, 370557.474939175 5677363.03228301, 370557.086700719 5677363.23546076, 370556.699583519 5677363.44076737, 370556.313599266 5677363.64819663, 370555.928759571 5677363.85774229, 370555.545076031 5677364.06939802, 370555.162560247 5677364.28315743, 370554.781223711 5677364.49901404, 370554.401077934 5677364.71696135, 370554.022134356 5677364.93699276, 370553.644404434 5677365.15910162, 370553.267899495 5677365.3832812, 370552.892630924 5677365.60952471, 370552.518609982 5677365.83782529, 370558.074123859 5677368.59051323, 370567.441040494 5677373.23208221, 370569.083224341 5677374.04533088, 370568.681370996 5677384.76710528, 370566.179280747 5677387.14653154, 370554.618586294 5677398.33827728, 370556.222589649 5677398.90303564, 370559.044886537 5677399.89824273, 370564.415523835 5677393.70379248, 370570.590621043 5677388.58493909, 370577.983567432 5677385.74232135, 370588.510407977 5677386.56941308, 370592.543578558 5677380.32917825, 370591.558556627 5677379.85319863, 370590.216238584 5677379.20373702, 370599.948468626 5677369.18503643, 370600.682038818 5677368.42958549, 370601.469256401 5677369.37894205, 370605.539127499 5677374.28834327, 370614.111720402 5677384.62969663, 370613.961980764 5677372.23362545, 370613.837336268 5677361.93262446, 370613.76407712 5677355.7969904, 370619.857138455 5677355.81175603, 370618.384171955 5677355.68593641))"
+    },
+    "aktenzeichen" : "00000",
+    "fk_mipa_nutzung" : {
+      "$self" : "/LAGIS.MIPA_NUTZUNG/1422",
+      "id" : 1422,
+      "ausgewaehlte_nummer" : null,
+      "fk_mipa_kategorie" : {
+        "$self" : "/LAGIS.MIPA_KATEGORIE/16",
+        "id" : 16,
+        "bezeichnung" : "Leitung"
+      }
+    },
+    "ar_mipa_merkmale" : [ ]
+  } ],
+  "rebes" : [ ]
+}

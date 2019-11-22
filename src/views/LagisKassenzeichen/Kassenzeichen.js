@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import KassenzeichenTabelle from './KassenzeichenTabelle.js';
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import LagisMap from '../Commons/LagisMap';
 import jsonData from './../../assets/json/fs_17778.json';
 import GetMapSize from '../Commons/SizeHelper.js';
+import FlurstueckContext from './../../model/FlurstueckContext.js';
 
-const Kassenzeichen = () => {
+const Kassenzeichen = ({ flurstueck: fl }) => {
+	const flurstueckContext = useContext(FlurstueckContext);
+
 	return (
 		<div className="animated fadeIn">
 			<Row>
@@ -22,7 +25,7 @@ const Kassenzeichen = () => {
 			</Row>
 			<Row>
 				<Col>
-					<KassenzeichenTabelle flurstueck={jsonData} />
+					<KassenzeichenTabelle flurstueck={flurstueckContext.flurstueck} />
 				</Col>
 			</Row>
 		</div>

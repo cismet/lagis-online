@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import MipaTabelle from './MipaTabelle.js';
-import jsonData from './../../assets/json/fs_22726.json';
 import MipaDetail from './MipaDetail.js';
 import LagisMap from '../Commons/LagisMap.js';
+import FlurstueckContext from './../../model/FlurstueckContext.js';
 
 const extractMipaById = (flurstueck, id) => {
 	var mipas = flurstueck.mipas;
@@ -22,11 +22,13 @@ const extractMipaById = (flurstueck, id) => {
 const Mipa = () => {
 	const [ selectedMipa, setSelectedMipa ] = useState(null);
 
+	const flurstueckContext = useContext(FlurstueckContext);
+
 	const mipaListener = (id) => {
 		if (id === null) {
 			setSelectedMipa(null);
 		} else {
-			setSelectedMipa(extractMipaById(jsonData, id));
+			setSelectedMipa(extractMipaById(flurstueckContext.flurstueck, id));
 		}
 	};
 
@@ -46,7 +48,7 @@ const Mipa = () => {
 			</Row>
 			<Row>
 				<Col>
-					<MipaTabelle flurstueck={jsonData} selectionListener={mipaListener} />
+					<MipaTabelle flurstueck={flurstueckContext.flurstueck} selectionListener={mipaListener} />
 				</Col>
 			</Row>
 			<Row>

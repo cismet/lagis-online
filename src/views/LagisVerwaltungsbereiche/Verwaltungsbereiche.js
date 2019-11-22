@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import DienststellenTabelle from './DienststellenTabelle.js';
 import RollenTabelle from './RollenTabelle.js';
@@ -6,18 +6,23 @@ import StrassenfrontTabelle from './StrassenfrontTabelle';
 import { FormGroup, Label, Input, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import LagisMap from '../Commons/LagisMap';
 import GetMapSize from '../Commons/SizeHelper.js';
-import jsonData from './../../assets/json/fs_22726.json';
 import '../viewStyle.css';
+import FlurstueckContext from './../../model/FlurstueckContext.js';
 //import jsonData from './../../assets/json/fs_23316.json';
 
 const Verwaltungsbereiche = () => {
+	const flurstueckContext = useContext(FlurstueckContext);
+
 	return (
 		<div className="animated fadeIn" style={{ margin: '10px' }}>
 			<Row>
 				<Col>
 					<Row>
 						<Col lg="8" style={{ height: GetMapSize() - 542 + 'px' }}>
-							<DienststellenTabelle style={{ height: '100%' }} flurstueck={jsonData} />
+							<DienststellenTabelle
+								style={{ height: '100%' }}
+								flurstueck={flurstueckContext.flurstueck}
+							/>
 						</Col>
 						<Col lg="4" style={{ height: '100%' }}>
 							<Card>
@@ -30,10 +35,10 @@ const Verwaltungsbereiche = () => {
 					</Row>
 					<Row>
 						<Col lg="4">
-							<RollenTabelle style={{ height: '90%' }} flurstueck={jsonData} />
+							<RollenTabelle style={{ height: '90%' }} flurstueck={flurstueckContext.flurstueck} />
 						</Col>
 						<Col lg="4">
-							<StrassenfrontTabelle style={{ height: '90%' }} flurstueck={jsonData} />
+							<StrassenfrontTabelle style={{ height: '90%' }} flurstueck={flurstueckContext.flurstueck} />
 						</Col>
 						<Col lg="4">
 							<Card style={{ height: '90%' }}>
@@ -48,7 +53,7 @@ const Verwaltungsbereiche = () => {
 											name="text"
 											id="bemerkungTa"
 											readOnly
-											value={jsonData.bemerkung}
+											value={flurstueckContext.flurstueck.bemerkung}
 										/>
 									</FormGroup>
 
